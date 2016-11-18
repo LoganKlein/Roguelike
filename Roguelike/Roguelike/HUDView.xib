@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Benegraphic.ttf">
+            <string>Benegraphic</string>
+            <string>Benegraphic</string>
+            <string>Benegraphic</string>
+            <string>Benegraphic</string>
+            <string>Benegraphic</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HUDView" customModule="Roguelike" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="77"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Level 00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2l-yJ-V45">
+                    <rect key="frame" x="8" y="9" width="33.5" height="60"/>
+                    <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="29"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vAG-xW-Vyv">
+                    <rect key="frame" x="49.5" y="8" width="495.5" height="15"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WWR-Tv-Yci">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="15"/>
+                            <color key="backgroundColor" red="0.80392156859999997" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="0ie-8w-RCG"/>
+                                <constraint firstAttribute="width" id="9ly-6y-BJr"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[0/0]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBX-Sq-3cK">
+                            <rect key="frame" x="236" y="1" width="24" height="13"/>
+                            <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="OBX-Sq-3cK" firstAttribute="centerX" secondItem="vAG-xW-Vyv" secondAttribute="centerX" id="DgA-aQ-xNx"/>
+                        <constraint firstItem="WWR-Tv-Yci" firstAttribute="leading" secondItem="vAG-xW-Vyv" secondAttribute="leading" id="F6B-hW-Ufq"/>
+                        <constraint firstAttribute="bottom" secondItem="OBX-Sq-3cK" secondAttribute="bottom" constant="1" id="QS7-Uw-ktq"/>
+                        <constraint firstItem="OBX-Sq-3cK" firstAttribute="top" secondItem="vAG-xW-Vyv" secondAttribute="top" constant="1" id="eAT-KA-itC"/>
+                        <constraint firstAttribute="bottom" secondItem="WWR-Tv-Yci" secondAttribute="bottom" id="iTi-OJ-df5"/>
+                        <constraint firstAttribute="height" constant="15" id="tAJ-hJ-ak5"/>
+                        <constraint firstItem="WWR-Tv-Yci" firstAttribute="top" secondItem="vAG-xW-Vyv" secondAttribute="top" id="zH0-cH-Wtc"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3GU-TC-eD9">
+                    <rect key="frame" x="49.5" y="31" width="495.5" height="15"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CzQ-Gy-dug">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="15"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" id="WgZ-n6-FGO"/>
+                                <constraint firstAttribute="height" constant="15" id="qmI-MX-2DW"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[0/0]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUP-L0-rl2">
+                            <rect key="frame" x="236" y="1" width="24" height="13"/>
+                            <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="gUP-L0-rl2" firstAttribute="centerX" secondItem="3GU-TC-eD9" secondAttribute="centerX" id="02D-r1-Awg"/>
+                        <constraint firstAttribute="height" constant="15" id="1e6-Ie-v4g"/>
+                        <constraint firstItem="CzQ-Gy-dug" firstAttribute="leading" secondItem="3GU-TC-eD9" secondAttribute="leading" id="2sk-cA-nau"/>
+                        <constraint firstAttribute="bottom" secondItem="gUP-L0-rl2" secondAttribute="bottom" constant="1" id="9gv-Dh-bu5"/>
+                        <constraint firstAttribute="bottom" secondItem="CzQ-Gy-dug" secondAttribute="bottom" id="j6A-or-2pr"/>
+                        <constraint firstItem="CzQ-Gy-dug" firstAttribute="top" secondItem="3GU-TC-eD9" secondAttribute="top" id="vQh-Hf-NTh"/>
+                        <constraint firstItem="gUP-L0-rl2" firstAttribute="top" secondItem="3GU-TC-eD9" secondAttribute="top" constant="1" id="x4a-R2-QhZ"/>
+                    </constraints>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFL-oV-KST">
+                    <rect key="frame" x="49.5" y="54" width="495.5" height="15"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rMF-GE-dWk">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="15"/>
+                            <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="lVx-x6-2sc"/>
+                                <constraint firstAttribute="width" id="qjt-vH-UPw"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[0/0]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2X-E5-d9R">
+                            <rect key="frame" x="236" y="1" width="24" height="13"/>
+                            <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="q2X-E5-d9R" firstAttribute="top" secondItem="YFL-oV-KST" secondAttribute="top" constant="1" id="0Nu-hR-ZOW"/>
+                        <constraint firstAttribute="height" constant="15" id="0iB-QC-V4C"/>
+                        <constraint firstAttribute="bottom" secondItem="q2X-E5-d9R" secondAttribute="bottom" constant="1" id="65K-aG-j90"/>
+                        <constraint firstAttribute="bottom" secondItem="rMF-GE-dWk" secondAttribute="bottom" id="6vv-iG-UAM"/>
+                        <constraint firstItem="rMF-GE-dWk" firstAttribute="top" secondItem="YFL-oV-KST" secondAttribute="top" id="GL4-nJ-Zy5"/>
+                        <constraint firstItem="q2X-E5-d9R" firstAttribute="centerX" secondItem="YFL-oV-KST" secondAttribute="centerX" id="YdJ-gg-h95"/>
+                        <constraint firstItem="rMF-GE-dWk" firstAttribute="leading" secondItem="YFL-oV-KST" secondAttribute="leading" id="gca-nP-y9A"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpX-7T-OPv">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="nF5-be-Uxo"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Floor 00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAF-KD-hpk">
+                    <rect key="frame" x="553" y="9" width="39" height="60"/>
+                    <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="29"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="jpX-7T-OPv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1GR-PO-qSl"/>
+                <constraint firstItem="3GU-TC-eD9" firstAttribute="leading" secondItem="l2l-yJ-V45" secondAttribute="trailing" constant="8" id="9az-UH-KEC"/>
+                <constraint firstItem="vAG-xW-Vyv" firstAttribute="leading" secondItem="l2l-yJ-V45" secondAttribute="trailing" constant="8" id="CGm-E9-Pra"/>
+                <constraint firstAttribute="trailing" secondItem="dAF-KD-hpk" secondAttribute="trailing" constant="8" id="DBj-v2-J9X"/>
+                <constraint firstItem="3GU-TC-eD9" firstAttribute="top" secondItem="vAG-xW-Vyv" secondAttribute="bottom" constant="8" id="NTI-MZ-yGo"/>
+                <constraint firstItem="dAF-KD-hpk" firstAttribute="leading" secondItem="YFL-oV-KST" secondAttribute="trailing" constant="8" id="QQu-tS-2iE"/>
+                <constraint firstItem="vAG-xW-Vyv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="RR7-ue-C1q"/>
+                <constraint firstItem="dAF-KD-hpk" firstAttribute="leading" secondItem="vAG-xW-Vyv" secondAttribute="trailing" constant="8" id="Vdf-wI-FkG"/>
+                <constraint firstAttribute="bottom" secondItem="YFL-oV-KST" secondAttribute="bottom" constant="8" id="ZCO-e3-xHF"/>
+                <constraint firstItem="dAF-KD-hpk" firstAttribute="leading" secondItem="3GU-TC-eD9" secondAttribute="trailing" constant="8" id="af7-xb-ltL"/>
+                <constraint firstItem="dAF-KD-hpk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="clb-11-aAn"/>
+                <constraint firstAttribute="trailing" secondItem="jpX-7T-OPv" secondAttribute="trailing" id="dBb-SJ-E84"/>
+                <constraint firstItem="YFL-oV-KST" firstAttribute="leading" secondItem="l2l-yJ-V45" secondAttribute="trailing" constant="8" id="dli-hr-UCa"/>
+                <constraint firstItem="l2l-yJ-V45" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mO5-6I-0ch"/>
+                <constraint firstItem="YFL-oV-KST" firstAttribute="top" secondItem="3GU-TC-eD9" secondAttribute="bottom" constant="8" id="tTV-Fd-6a9"/>
+                <constraint firstItem="jpX-7T-OPv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tWl-KX-6jr"/>
+                <constraint firstItem="l2l-yJ-V45" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="w3C-el-8QA"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="expIV" destination="rMF-GE-dWk" id="4Zv-Hm-u9Q"/>
+                <outlet property="expLbl" destination="q2X-E5-d9R" id="NFk-XN-Aou"/>
+                <outlet property="expView" destination="YFL-oV-KST" id="BBn-Rv-6VT"/>
+                <outlet property="expWidthConstraint" destination="qjt-vH-UPw" id="aDD-wZ-GXw"/>
+                <outlet property="floorLbl" destination="dAF-KD-hpk" id="KhD-PE-xlU"/>
+                <outlet property="healthIV" destination="WWR-Tv-Yci" id="d2a-rl-tDJ"/>
+                <outlet property="healthLbl" destination="OBX-Sq-3cK" id="M1D-Zt-DyH"/>
+                <outlet property="healthView" destination="vAG-xW-Vyv" id="8jg-8M-320"/>
+                <outlet property="healthWidthConstraint" destination="9ly-6y-BJr" id="W7T-jJ-9Ie"/>
+                <outlet property="levelLbl" destination="l2l-yJ-V45" id="c10-TT-TQ7"/>
+                <outlet property="sanityIV" destination="CzQ-Gy-dug" id="8Qb-Lz-uK9"/>
+                <outlet property="sanityLbl" destination="gUP-L0-rl2" id="U95-n2-949"/>
+                <outlet property="sanityView" destination="3GU-TC-eD9" id="1wM-sg-RMX"/>
+                <outlet property="sanityWidthConstraint" destination="WgZ-n6-FGO" id="BkT-eG-HVw"/>
+            </connections>
+            <point key="canvasLocation" x="874" y="664.5"/>
+        </view>
+    </objects>
+</document>

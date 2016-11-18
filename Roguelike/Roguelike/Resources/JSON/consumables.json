@@ -1,0 +1,47 @@
+ [
+  {
+  "name" : "Weak Potion",
+  "image": "asset_93",
+  "atkBns" : 0.0,
+  "defBns" : 0.0,
+  "maxHPBns" : 0.0,
+  "curHPBns" : 5.0,
+  "lckBns" : 0.0,
+  "regBns" : 0.0,
+  "styBns" : 0.0,
+  "duration" : 0,
+  "type": 0,
+  "minFloor" : 0,
+  "maxFloor" : 0
+  },
+  {
+  "name" : "Potion",
+  "image": "asset_94",
+  "atkBns" : 0.0,
+  "defBns" : 0.0,
+  "maxHPBns" : 0.0,
+  "curHPBns" : 10.0,
+  "lckBns" : 0.0,
+  "regBns" : 0.0,
+  "styBns" : 0.0,
+  "duration" : 0,
+  "type": 0,
+  "minFloor" : 0,
+  "maxFloor" : 0
+  },
+  {
+  "name" : "Strong Potion",
+  "image": "asset_91",
+  "atkBns" : 0.0,
+  "defBns" : 0.0,
+  "maxHPBns" : 0.0,
+  "curHPBns" : 15.0,
+  "lckBns" : 0.0,
+  "regBns" : 0.0,
+  "styBns" : 0.0,
+  "duration" : 0,
+  "type": 0,
+  "minFloor" : 0,
+  "maxFloor" : 0
+  }
+  ]

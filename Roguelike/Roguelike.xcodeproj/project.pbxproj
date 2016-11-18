@@ -1,0 +1,869 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D6B65271DDCF39100A93480 /* consumables.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D6B65261DDCF39100A93480 /* consumables.json */; };
+		5D7A57F51DD517F500ADD026 /* CharacterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A57F41DD517F500ADD026 /* CharacterObject.swift */; };
+		5D7A57F71DD5307B00ADD026 /* CollisionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A57F61DD5307B00ADD026 /* CollisionHelper.swift */; };
+		5D7A57FD1DD62F1600ADD026 /* NumberHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A57FC1DD62F1600ADD026 /* NumberHelper.swift */; };
+		5D7A58061DD65DB600ADD026 /* GameMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A58051DD65DB600ADD026 /* GameMap.swift */; };
+		5D7A58081DD65E8300ADD026 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A58071DD65E8300ADD026 /* Extensions.swift */; };
+		5D7A580A1DD65ED200ADD026 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A58091DD65ED200ADD026 /* GameViewController.swift */; };
+		5D7A580F1DD6634A00ADD026 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A580E1DD6634A00ADD026 /* GameObject.swift */; };
+		5D7A58111DD6912C00ADD026 /* CharacterSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A58101DD6912C00ADD026 /* CharacterSelectViewController.swift */; };
+		5D7A58151DD69FBA00ADD026 /* Benegraphic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D7A58141DD69FBA00ADD026 /* Benegraphic.ttf */; };
+		5D7A58171DD6AD3100ADD026 /* ItemObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A58161DD6AD3100ADD026 /* ItemObject.swift */; };
+		5D7D1F081DDE947800AC6E37 /* EnemyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D1F071DDE947800AC6E37 /* EnemyObject.swift */; };
+		5D7D1F0A1DDE94EC00AC6E37 /* PlayerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D1F091DDE94EC00AC6E37 /* PlayerObject.swift */; };
+		5D7D1F0C1DDE9FA100AC6E37 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D1F0B1DDE9FA100AC6E37 /* JSONHelper.swift */; };
+		5D82AF9E1DDA3EC400750161 /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D82AF9D1DDA3EC400750161 /* HUDView.swift */; };
+		5D82AFA01DDA3ED000750161 /* HUDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D82AF9F1DDA3ED000750161 /* HUDView.xib */; };
+		5D956BC41DD81CD30073CEC8 /* CharacterSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D956BC31DD81CD30073CEC8 /* CharacterSelectView.swift */; };
+		5D956BC61DD81D780073CEC8 /* CharacterSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D956BC51DD81D780073CEC8 /* CharacterSelectView.xib */; };
+		5D9E42041DDE22A600597C9E /* ItemHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9E42031DDE22A600597C9E /* ItemHUDView.swift */; };
+		5D9E42061DDE22AE00597C9E /* ItemHUDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D9E42051DDE22AE00597C9E /* ItemHUDView.xib */; };
+		5D9E42081DDE6AC300597C9E /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D9E42071DDE6AC300597C9E /* enemies.json */; };
+		5DB386F71DDB7B0B00240C55 /* armor.json in Resources */ = {isa = PBXBuildFile; fileRef = 5DB386F41DDB7B0B00240C55 /* armor.json */; };
+		5DB386F81DDB7B0B00240C55 /* buffs.json in Resources */ = {isa = PBXBuildFile; fileRef = 5DB386F51DDB7B0B00240C55 /* buffs.json */; };
+		5DB386F91DDB7B0B00240C55 /* weapons.json in Resources */ = {isa = PBXBuildFile; fileRef = 5DB386F61DDB7B0B00240C55 /* weapons.json */; };
+		5DECA8C31DD10B870001EFE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECA8C21DD10B870001EFE7 /* AppDelegate.swift */; };
+		5DECA8C81DD10B870001EFE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DECA8C61DD10B870001EFE7 /* Main.storyboard */; };
+		5DECA8CA1DD10B870001EFE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DECA8C91DD10B870001EFE7 /* Assets.xcassets */; };
+		5DECA8CD1DD10B870001EFE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DECA8CB1DD10B870001EFE7 /* LaunchScreen.storyboard */; };
+		5DECA8D81DD10B870001EFE7 /* RoguelikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECA8D71DD10B870001EFE7 /* RoguelikeTests.swift */; };
+		5DECA8E31DD10B880001EFE7 /* RoguelikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECA8E21DD10B880001EFE7 /* RoguelikeUITests.swift */; };
+		5DECA8F11DD10BAF0001EFE7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECA8F01DD10BAF0001EFE7 /* MenuViewController.swift */; };
+		5DECA8F31DD10D150001EFE7 /* MansionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECA8F21DD10D150001EFE7 /* MansionViewController.swift */; };
+		5DECA8F51DD10D1D0001EFE7 /* PortalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECA8F41DD10D1D0001EFE7 /* PortalViewController.swift */; };
+		5DECA9061DD2739C0001EFE7 /* CAMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DECA9051DD2739C0001EFE7 /* CAMap.swift */; };
+		64B7D9EC962716E8F3F84E6A /* Pods_RoguelikeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C81B6916AD8CFD203FD20B /* Pods_RoguelikeTests.framework */; };
+		BA483CC54350F3939EBB0D89 /* Pods_RoguelikeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECEC62246DBFDFD859D7734 /* Pods_RoguelikeUITests.framework */; };
+		C15F997EEF614D1E8B0D0E6C /* Pods_Roguelike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D7A911228273D865996692 /* Pods_Roguelike.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5DECA8D41DD10B870001EFE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DECA8B71DD10B870001EFE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DECA8BE1DD10B870001EFE7;
+			remoteInfo = Roguelike;
+		};
+		5DECA8DF1DD10B880001EFE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DECA8B71DD10B870001EFE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DECA8BE1DD10B870001EFE7;
+			remoteInfo = Roguelike;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1ECEC62246DBFDFD859D7734 /* Pods_RoguelikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoguelikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22C81B6916AD8CFD203FD20B /* Pods_RoguelikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoguelikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FAD65ED4165A1136B512911 /* Pods-Roguelike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roguelike.release.xcconfig"; path = "Pods/Target Support Files/Pods-Roguelike/Pods-Roguelike.release.xcconfig"; sourceTree = "<group>"; };
+		5D6B65261DDCF39100A93480 /* consumables.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = consumables.json; sourceTree = "<group>"; };
+		5D7A57F41DD517F500ADD026 /* CharacterObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterObject.swift; sourceTree = "<group>"; };
+		5D7A57F61DD5307B00ADD026 /* CollisionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionHelper.swift; sourceTree = "<group>"; };
+		5D7A57FC1DD62F1600ADD026 /* NumberHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberHelper.swift; sourceTree = "<group>"; };
+		5D7A58051DD65DB600ADD026 /* GameMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMap.swift; sourceTree = "<group>"; };
+		5D7A58071DD65E8300ADD026 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5D7A58091DD65ED200ADD026 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5D7A580E1DD6634A00ADD026 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		5D7A58101DD6912C00ADD026 /* CharacterSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSelectViewController.swift; sourceTree = "<group>"; };
+		5D7A58141DD69FBA00ADD026 /* Benegraphic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Benegraphic.ttf; sourceTree = "<group>"; };
+		5D7A58161DD6AD3100ADD026 /* ItemObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemObject.swift; sourceTree = "<group>"; };
+		5D7D1F071DDE947800AC6E37 /* EnemyObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyObject.swift; sourceTree = "<group>"; };
+		5D7D1F091DDE94EC00AC6E37 /* PlayerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerObject.swift; sourceTree = "<group>"; };
+		5D7D1F0B1DDE9FA100AC6E37 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
+		5D82AF9D1DDA3EC400750161 /* HUDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
+		5D82AF9F1DDA3ED000750161 /* HUDView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HUDView.xib; sourceTree = "<group>"; };
+		5D956BC31DD81CD30073CEC8 /* CharacterSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSelectView.swift; sourceTree = "<group>"; };
+		5D956BC51DD81D780073CEC8 /* CharacterSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterSelectView.xib; sourceTree = "<group>"; };
+		5D9E42031DDE22A600597C9E /* ItemHUDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemHUDView.swift; sourceTree = "<group>"; };
+		5D9E42051DDE22AE00597C9E /* ItemHUDView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemHUDView.xib; sourceTree = "<group>"; };
+		5D9E42071DDE6AC300597C9E /* enemies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enemies.json; sourceTree = "<group>"; };
+		5DB386F41DDB7B0B00240C55 /* armor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = armor.json; sourceTree = "<group>"; };
+		5DB386F51DDB7B0B00240C55 /* buffs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buffs.json; sourceTree = "<group>"; };
+		5DB386F61DDB7B0B00240C55 /* weapons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weapons.json; sourceTree = "<group>"; };
+		5DECA8BF1DD10B870001EFE7 /* Roguelike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roguelike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DECA8C21DD10B870001EFE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5DECA8C71DD10B870001EFE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DECA8C91DD10B870001EFE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DECA8CC1DD10B870001EFE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DECA8CE1DD10B870001EFE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DECA8D31DD10B870001EFE7 /* RoguelikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoguelikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DECA8D71DD10B870001EFE7 /* RoguelikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoguelikeTests.swift; sourceTree = "<group>"; };
+		5DECA8D91DD10B870001EFE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DECA8DE1DD10B880001EFE7 /* RoguelikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoguelikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DECA8E21DD10B880001EFE7 /* RoguelikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoguelikeUITests.swift; sourceTree = "<group>"; };
+		5DECA8E41DD10B880001EFE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DECA8F01DD10BAF0001EFE7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		5DECA8F21DD10D150001EFE7 /* MansionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MansionViewController.swift; sourceTree = "<group>"; };
+		5DECA8F41DD10D1D0001EFE7 /* PortalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortalViewController.swift; sourceTree = "<group>"; };
+		5DECA9051DD2739C0001EFE7 /* CAMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAMap.swift; sourceTree = "<group>"; };
+		81D7A911228273D865996692 /* Pods_Roguelike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roguelike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		845659219653294FA33937DF /* Pods-Roguelike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roguelike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Roguelike/Pods-Roguelike.debug.xcconfig"; sourceTree = "<group>"; };
+		A9F6769893E3FBCE9BCB2211 /* Pods-RoguelikeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoguelikeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoguelikeTests/Pods-RoguelikeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD05B3832C5D2FD08255ABB5 /* Pods-RoguelikeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoguelikeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoguelikeUITests/Pods-RoguelikeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DBF4DD621830931CFE8A308F /* Pods-RoguelikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoguelikeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoguelikeTests/Pods-RoguelikeTests.release.xcconfig"; sourceTree = "<group>"; };
+		E7591085C7C5718927A8D9CF /* Pods-RoguelikeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoguelikeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RoguelikeUITests/Pods-RoguelikeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DECA8BC1DD10B870001EFE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C15F997EEF614D1E8B0D0E6C /* Pods_Roguelike.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DECA8D01DD10B870001EFE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64B7D9EC962716E8F3F84E6A /* Pods_RoguelikeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DECA8DB1DD10B870001EFE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA483CC54350F3939EBB0D89 /* Pods_RoguelikeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		257188D26ED9B9D0C7E31C27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				845659219653294FA33937DF /* Pods-Roguelike.debug.xcconfig */,
+				4FAD65ED4165A1136B512911 /* Pods-Roguelike.release.xcconfig */,
+				A9F6769893E3FBCE9BCB2211 /* Pods-RoguelikeTests.debug.xcconfig */,
+				DBF4DD621830931CFE8A308F /* Pods-RoguelikeTests.release.xcconfig */,
+				E7591085C7C5718927A8D9CF /* Pods-RoguelikeUITests.debug.xcconfig */,
+				AD05B3832C5D2FD08255ABB5 /* Pods-RoguelikeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5D7A57F31DD517DF00ADD026 /* Character Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5D7A57F41DD517F500ADD026 /* CharacterObject.swift */,
+				5D7D1F091DDE94EC00AC6E37 /* PlayerObject.swift */,
+				5D7D1F071DDE947800AC6E37 /* EnemyObject.swift */,
+				5D7A58161DD6AD3100ADD026 /* ItemObject.swift */,
+			);
+			name = "Character Objects";
+			sourceTree = "<group>";
+		};
+		5D7A580B1DD662BB00ADD026 /* Map Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5D7A58051DD65DB600ADD026 /* GameMap.swift */,
+				5DECA9051DD2739C0001EFE7 /* CAMap.swift */,
+			);
+			name = "Map Objects";
+			sourceTree = "<group>";
+		};
+		5D7A580C1DD662D500ADD026 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DECA8F01DD10BAF0001EFE7 /* MenuViewController.swift */,
+				5D7A58101DD6912C00ADD026 /* CharacterSelectViewController.swift */,
+				5DECA8F21DD10D150001EFE7 /* MansionViewController.swift */,
+				5DECA8F41DD10D1D0001EFE7 /* PortalViewController.swift */,
+				5D7A58091DD65ED200ADD026 /* GameViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5D7A580D1DD6633700ADD026 /* Game Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5D7A580E1DD6634A00ADD026 /* GameObject.swift */,
+			);
+			name = "Game Objects";
+			sourceTree = "<group>";
+		};
+		5D7A58121DD69FBA00ADD026 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5DB386F31DDB7B0B00240C55 /* JSON */,
+				5D7A58131DD69FBA00ADD026 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5D7A58131DD69FBA00ADD026 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5D7A58141DD69FBA00ADD026 /* Benegraphic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5D956BC21DD81C2F0073CEC8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D956BC31DD81CD30073CEC8 /* CharacterSelectView.swift */,
+				5D956BC51DD81D780073CEC8 /* CharacterSelectView.xib */,
+				5D82AF9D1DDA3EC400750161 /* HUDView.swift */,
+				5D82AF9F1DDA3ED000750161 /* HUDView.xib */,
+				5D9E42031DDE22A600597C9E /* ItemHUDView.swift */,
+				5D9E42051DDE22AE00597C9E /* ItemHUDView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5DB386F31DDB7B0B00240C55 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				5D9E42071DDE6AC300597C9E /* enemies.json */,
+				5D6B65261DDCF39100A93480 /* consumables.json */,
+				5DB386F41DDB7B0B00240C55 /* armor.json */,
+				5DB386F51DDB7B0B00240C55 /* buffs.json */,
+				5DB386F61DDB7B0B00240C55 /* weapons.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		5DECA8B61DD10B870001EFE7 = {
+			isa = PBXGroup;
+			children = (
+				5DECA8C11DD10B870001EFE7 /* Roguelike */,
+				5DECA8D61DD10B870001EFE7 /* RoguelikeTests */,
+				5DECA8E11DD10B880001EFE7 /* RoguelikeUITests */,
+				5DECA8C01DD10B870001EFE7 /* Products */,
+				257188D26ED9B9D0C7E31C27 /* Pods */,
+				F3855C805767C95E887B880F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5DECA8C01DD10B870001EFE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DECA8BF1DD10B870001EFE7 /* Roguelike.app */,
+				5DECA8D31DD10B870001EFE7 /* RoguelikeTests.xctest */,
+				5DECA8DE1DD10B880001EFE7 /* RoguelikeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DECA8C11DD10B870001EFE7 /* Roguelike */ = {
+			isa = PBXGroup;
+			children = (
+				5DECA8C21DD10B870001EFE7 /* AppDelegate.swift */,
+				5DECA8C91DD10B870001EFE7 /* Assets.xcassets */,
+				5D7A57F31DD517DF00ADD026 /* Character Objects */,
+				5DECA8FC1DD13C6A0001EFE7 /* Helpers */,
+				5D7A580D1DD6633700ADD026 /* Game Objects */,
+				5D7A580B1DD662BB00ADD026 /* Map Objects */,
+				5D956BC21DD81C2F0073CEC8 /* Views */,
+				5D7A580C1DD662D500ADD026 /* View Controllers */,
+				5DECA8CE1DD10B870001EFE7 /* Info.plist */,
+				5DECA8CB1DD10B870001EFE7 /* LaunchScreen.storyboard */,
+				5DECA8C61DD10B870001EFE7 /* Main.storyboard */,
+				5D7A58121DD69FBA00ADD026 /* Resources */,
+			);
+			path = Roguelike;
+			sourceTree = "<group>";
+		};
+		5DECA8D61DD10B870001EFE7 /* RoguelikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				5DECA8D71DD10B870001EFE7 /* RoguelikeTests.swift */,
+				5DECA8D91DD10B870001EFE7 /* Info.plist */,
+			);
+			path = RoguelikeTests;
+			sourceTree = "<group>";
+		};
+		5DECA8E11DD10B880001EFE7 /* RoguelikeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5DECA8E21DD10B880001EFE7 /* RoguelikeUITests.swift */,
+				5DECA8E41DD10B880001EFE7 /* Info.plist */,
+			);
+			path = RoguelikeUITests;
+			sourceTree = "<group>";
+		};
+		5DECA8FC1DD13C6A0001EFE7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5D7A58071DD65E8300ADD026 /* Extensions.swift */,
+				5D7A57F61DD5307B00ADD026 /* CollisionHelper.swift */,
+				5D7A57FC1DD62F1600ADD026 /* NumberHelper.swift */,
+				5D7D1F0B1DDE9FA100AC6E37 /* JSONHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		F3855C805767C95E887B880F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81D7A911228273D865996692 /* Pods_Roguelike.framework */,
+				22C81B6916AD8CFD203FD20B /* Pods_RoguelikeTests.framework */,
+				1ECEC62246DBFDFD859D7734 /* Pods_RoguelikeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DECA8BE1DD10B870001EFE7 /* Roguelike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DECA8E71DD10B880001EFE7 /* Build configuration list for PBXNativeTarget "Roguelike" */;
+			buildPhases = (
+				68BB1E97F752B5D090D6F51B /* [CP] Check Pods Manifest.lock */,
+				5DECA8BB1DD10B870001EFE7 /* Sources */,
+				5DECA8BC1DD10B870001EFE7 /* Frameworks */,
+				5DECA8BD1DD10B870001EFE7 /* Resources */,
+				A3ED7024395D2EAE4C42C503 /* [CP] Embed Pods Frameworks */,
+				4E2B93D6EEF25E0DB9E5C992 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Roguelike;
+			productName = Roguelike;
+			productReference = 5DECA8BF1DD10B870001EFE7 /* Roguelike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DECA8D21DD10B870001EFE7 /* RoguelikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DECA8EA1DD10B880001EFE7 /* Build configuration list for PBXNativeTarget "RoguelikeTests" */;
+			buildPhases = (
+				0B85BF62B0C67148363BBBBE /* [CP] Check Pods Manifest.lock */,
+				5DECA8CF1DD10B870001EFE7 /* Sources */,
+				5DECA8D01DD10B870001EFE7 /* Frameworks */,
+				5DECA8D11DD10B870001EFE7 /* Resources */,
+				E7F506BF586027E83B91A151 /* [CP] Embed Pods Frameworks */,
+				BB9C209812CCE161B0F3E784 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DECA8D51DD10B870001EFE7 /* PBXTargetDependency */,
+			);
+			name = RoguelikeTests;
+			productName = RoguelikeTests;
+			productReference = 5DECA8D31DD10B870001EFE7 /* RoguelikeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5DECA8DD1DD10B870001EFE7 /* RoguelikeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DECA8ED1DD10B880001EFE7 /* Build configuration list for PBXNativeTarget "RoguelikeUITests" */;
+			buildPhases = (
+				E99FD9AE8CBC3D9E29785D4C /* [CP] Check Pods Manifest.lock */,
+				5DECA8DA1DD10B870001EFE7 /* Sources */,
+				5DECA8DB1DD10B870001EFE7 /* Frameworks */,
+				5DECA8DC1DD10B870001EFE7 /* Resources */,
+				C0EC9083B86DB79DE464F5BB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DECA8E01DD10B880001EFE7 /* PBXTargetDependency */,
+			);
+			name = RoguelikeUITests;
+			productName = RoguelikeUITests;
+			productReference = 5DECA8DE1DD10B880001EFE7 /* RoguelikeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DECA8B71DD10B870001EFE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Soular;
+				TargetAttributes = {
+					5DECA8BE1DD10B870001EFE7 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					5DECA8D21DD10B870001EFE7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5DECA8BE1DD10B870001EFE7;
+					};
+					5DECA8DD1DD10B870001EFE7 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 5DECA8BE1DD10B870001EFE7;
+					};
+				};
+			};
+			buildConfigurationList = 5DECA8BA1DD10B870001EFE7 /* Build configuration list for PBXProject "Roguelike" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DECA8B61DD10B870001EFE7;
+			productRefGroup = 5DECA8C01DD10B870001EFE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DECA8BE1DD10B870001EFE7 /* Roguelike */,
+				5DECA8D21DD10B870001EFE7 /* RoguelikeTests */,
+				5DECA8DD1DD10B870001EFE7 /* RoguelikeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DECA8BD1DD10B870001EFE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB386F81DDB7B0B00240C55 /* buffs.json in Resources */,
+				5DECA8CD1DD10B870001EFE7 /* LaunchScreen.storyboard in Resources */,
+				5DB386F71DDB7B0B00240C55 /* armor.json in Resources */,
+				5DECA8CA1DD10B870001EFE7 /* Assets.xcassets in Resources */,
+				5D9E42061DDE22AE00597C9E /* ItemHUDView.xib in Resources */,
+				5DB386F91DDB7B0B00240C55 /* weapons.json in Resources */,
+				5D82AFA01DDA3ED000750161 /* HUDView.xib in Resources */,
+				5D6B65271DDCF39100A93480 /* consumables.json in Resources */,
+				5D956BC61DD81D780073CEC8 /* CharacterSelectView.xib in Resources */,
+				5DECA8C81DD10B870001EFE7 /* Main.storyboard in Resources */,
+				5D9E42081DDE6AC300597C9E /* enemies.json in Resources */,
+				5D7A58151DD69FBA00ADD026 /* Benegraphic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DECA8D11DD10B870001EFE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DECA8DC1DD10B870001EFE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B85BF62B0C67148363BBBBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E2B93D6EEF25E0DB9E5C992 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Roguelike/Pods-Roguelike-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68BB1E97F752B5D090D6F51B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3ED7024395D2EAE4C42C503 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Roguelike/Pods-Roguelike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB9C209812CCE161B0F3E784 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RoguelikeTests/Pods-RoguelikeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0EC9083B86DB79DE464F5BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RoguelikeUITests/Pods-RoguelikeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7F506BF586027E83B91A151 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RoguelikeTests/Pods-RoguelikeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E99FD9AE8CBC3D9E29785D4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DECA8BB1DD10B870001EFE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DECA9061DD2739C0001EFE7 /* CAMap.swift in Sources */,
+				5D7A58061DD65DB600ADD026 /* GameMap.swift in Sources */,
+				5DECA8F31DD10D150001EFE7 /* MansionViewController.swift in Sources */,
+				5DECA8C31DD10B870001EFE7 /* AppDelegate.swift in Sources */,
+				5D82AF9E1DDA3EC400750161 /* HUDView.swift in Sources */,
+				5D7A57F71DD5307B00ADD026 /* CollisionHelper.swift in Sources */,
+				5D7A58171DD6AD3100ADD026 /* ItemObject.swift in Sources */,
+				5D7A58081DD65E8300ADD026 /* Extensions.swift in Sources */,
+				5D7A58111DD6912C00ADD026 /* CharacterSelectViewController.swift in Sources */,
+				5D7D1F0C1DDE9FA100AC6E37 /* JSONHelper.swift in Sources */,
+				5D9E42041DDE22A600597C9E /* ItemHUDView.swift in Sources */,
+				5D7A57F51DD517F500ADD026 /* CharacterObject.swift in Sources */,
+				5D7D1F0A1DDE94EC00AC6E37 /* PlayerObject.swift in Sources */,
+				5D956BC41DD81CD30073CEC8 /* CharacterSelectView.swift in Sources */,
+				5DECA8F51DD10D1D0001EFE7 /* PortalViewController.swift in Sources */,
+				5D7D1F081DDE947800AC6E37 /* EnemyObject.swift in Sources */,
+				5D7A580F1DD6634A00ADD026 /* GameObject.swift in Sources */,
+				5D7A57FD1DD62F1600ADD026 /* NumberHelper.swift in Sources */,
+				5D7A580A1DD65ED200ADD026 /* GameViewController.swift in Sources */,
+				5DECA8F11DD10BAF0001EFE7 /* MenuViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DECA8CF1DD10B870001EFE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DECA8D81DD10B870001EFE7 /* RoguelikeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DECA8DA1DD10B870001EFE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DECA8E31DD10B880001EFE7 /* RoguelikeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DECA8D51DD10B870001EFE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DECA8BE1DD10B870001EFE7 /* Roguelike */;
+			targetProxy = 5DECA8D41DD10B870001EFE7 /* PBXContainerItemProxy */;
+		};
+		5DECA8E01DD10B880001EFE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DECA8BE1DD10B870001EFE7 /* Roguelike */;
+			targetProxy = 5DECA8DF1DD10B880001EFE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5DECA8C61DD10B870001EFE7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DECA8C71DD10B870001EFE7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5DECA8CB1DD10B870001EFE7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DECA8CC1DD10B870001EFE7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DECA8E51DD10B880001EFE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5DECA8E61DD10B880001EFE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DECA8E81DD10B880001EFE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 845659219653294FA33937DF /* Pods-Roguelike.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Roguelike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Soular.Roguelike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5DECA8E91DD10B880001EFE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FAD65ED4165A1136B512911 /* Pods-Roguelike.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Roguelike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Soular.Roguelike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5DECA8EB1DD10B880001EFE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9F6769893E3FBCE9BCB2211 /* Pods-RoguelikeTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RoguelikeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Soular.RoguelikeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roguelike.app/Roguelike";
+			};
+			name = Debug;
+		};
+		5DECA8EC1DD10B880001EFE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBF4DD621830931CFE8A308F /* Pods-RoguelikeTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RoguelikeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Soular.RoguelikeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Roguelike.app/Roguelike";
+			};
+			name = Release;
+		};
+		5DECA8EE1DD10B880001EFE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7591085C7C5718927A8D9CF /* Pods-RoguelikeUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = RoguelikeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Soular.RoguelikeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Roguelike;
+			};
+			name = Debug;
+		};
+		5DECA8EF1DD10B880001EFE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD05B3832C5D2FD08255ABB5 /* Pods-RoguelikeUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = RoguelikeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Soular.RoguelikeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Roguelike;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DECA8BA1DD10B870001EFE7 /* Build configuration list for PBXProject "Roguelike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DECA8E51DD10B880001EFE7 /* Debug */,
+				5DECA8E61DD10B880001EFE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DECA8E71DD10B880001EFE7 /* Build configuration list for PBXNativeTarget "Roguelike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DECA8E81DD10B880001EFE7 /* Debug */,
+				5DECA8E91DD10B880001EFE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DECA8EA1DD10B880001EFE7 /* Build configuration list for PBXNativeTarget "RoguelikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DECA8EB1DD10B880001EFE7 /* Debug */,
+				5DECA8EC1DD10B880001EFE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DECA8ED1DD10B880001EFE7 /* Build configuration list for PBXNativeTarget "RoguelikeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DECA8EE1DD10B880001EFE7 /* Debug */,
+				5DECA8EF1DD10B880001EFE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DECA8B71DD10B870001EFE7 /* Project object */;
+}

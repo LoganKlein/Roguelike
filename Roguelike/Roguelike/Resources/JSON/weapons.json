@@ -1,0 +1,45 @@
+ [
+  {
+  "name" : "Dagger",
+  "image": "asset_47",
+  "atkBns" : 1.0,
+  "defBns" : 0.0,
+  "maxHPBns" : 0.0,
+  "curHPBns" : 0.0,
+  "lckBns" : 0.0,
+  "regBns" : 0.0,
+  "styBns" : 0.0,
+  "duration" : 0,
+  "type": 2,
+  "minFloor" : 0,
+  "maxFloor" : 0
+  }, {
+  "name" : "Short Sword",
+  "image": "asset_51",
+  "atkBns" : 2.0,
+  "defBns" : 0.0,
+  "maxHPBns" : 0.0,
+  "curHPBns" : 0.0,
+  "lckBns" : 0.0,
+  "regBns" : 0.0,
+  "styBns" : 0.0,
+  "duration" : 0,
+  "type": 2,
+  "minFloor" : 0,
+  "maxFloor" : 0
+  }, {
+  "name" : "Long Sword",
+  "image": "asset_31",
+  "atkBns" : 3.0,
+  "defBns" : 0.0,
+  "maxHPBns" : 0.0,
+  "curHPBns" : 0.0,
+  "lckBns" : 0.0,
+  "regBns" : 0.0,
+  "styBns" : 0.0,
+  "duration" : 0,
+  "type": 2,
+  "minFloor" : 0,
+  "maxFloor" : 0
+  }
+  ]

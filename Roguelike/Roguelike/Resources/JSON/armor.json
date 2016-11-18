@@ -1,0 +1,45 @@
+ [
+  {
+  "name" : "Leather Vest",
+  "image": "asset_02",
+  "atkBns" : 0.0,
+  "defBns" : 1.0,
+  "maxHPBns" : 0.0,
+  "curHPBns" : 0.0,
+  "lckBns" : 0.0,
+  "regBns" : 0.0,
+  "styBns" : 0.0,
+  "duration" : 0,
+  "type": 1,
+  "minFloor" : 0,
+  "maxFloor" : 0
+  }, {
+  "name" : "Leather Coat",
+  "image": "asset_03",
+  "atkBns" : 0.0,
+  "defBns" : 2.0,
+  "maxHPBns" : 0.0,
+  "curHPBns" : 0.0,
+  "lckBns" : 0.0,
+  "regBns" : 0.0,
+  "styBns" : 0.0,
+  "duration" : 0,
+  "type": 1,
+  "minFloor" : 0,
+  "maxFloor" : 0
+  }, {
+  "name" : "Scale Coat",
+  "image": "asset_04",
+  "atkBns" : 0.0,
+  "defBns" : 3.0,
+  "maxHPBns" : 0.0,
+  "curHPBns" : 0.0,
+  "lckBns" : 0.0,
+  "regBns" : 0.0,
+  "styBns" : 0.0,
+  "duration" : 0,
+  "type": 1,
+  "minFloor" : 0,
+  "maxFloor" : 0
+  }
+  ]

@@ -1,0 +1,47 @@
+ [
+  {
+  "name" : "Crit Buff",
+  "image": "asset_136",
+  "atkBns" : 0.0,
+  "defBns" : 0.0,
+  "maxHPBns" : 0.0,
+  "curHPBns" : 0.0,
+  "lckBns" : 3.0,
+  "regBns" : 0.0,
+  "styBns" : 0.0,
+  "duration" : 20,
+  "type": 3,
+  "minFloor" : 0,
+  "maxFloor" : 0
+  },
+  {
+  "name" : "Max HP Buff",
+  "image": "asset_134",
+  "atkBns" : 0.0,
+  "defBns" : 0.0,
+  "maxHPBns" : 5.0,
+  "curHPBns" : 0.0,
+  "lckBns" : 0.0,
+  "regBns" : 0.0,
+  "styBns" : 0.0,
+  "duration" : 20,
+  "type": 3,
+  "minFloor" : 0,
+  "maxFloor" : 0
+  },
+  {
+  "name" : "Regen Buff",
+  "image": "asset_129",
+  "atkBns" : 0.0,
+  "defBns" : 0.0,
+  "maxHPBns" : 0.0,
+  "curHPBns" : 0.0,
+  "lckBns" : 0.0,
+  "regBns" : 0.3,
+  "styBns" : 0.0,
+  "duration" : 20,
+  "type": 3,
+  "minFloor" : 0,
+  "maxFloor" : 0
+  }
+  ]
