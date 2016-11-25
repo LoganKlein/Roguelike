@@ -28,8 +28,13 @@ class PortalViewController: GameViewController {
     }
     
     func createMap() {
-        let width = 10 + (game.floor/2 + 1)
-        let height = 10 + (game.floor/2)
+        var width = 10 + (game.floor/2 + 1)
+        var height = 10 + (game.floor/2)
+        
+        //Don't let the maps get out of hand
+        if width > 150 { width = 150 }
+        if height > 150 { height = 150 }
+        
         let size = CGSizeMake(CGFloat(width), CGFloat(height))
         game.map = CAMap().createMap(size, floor: game.floor)
         
@@ -60,6 +65,7 @@ extension PortalViewController: GameViewControllerDelegate {
             
             let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(self.fadeSpeed * Double(NSEC_PER_SEC)))
             dispatch_after(delayTime, dispatch_get_main_queue()) {
+                self.game.player.loseSanity(1.0)
                 self.createMap()
                 self.fadeBlack(0)
             }

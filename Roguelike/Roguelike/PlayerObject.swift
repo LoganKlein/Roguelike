@@ -9,15 +9,15 @@
 import UIKit
 
 enum CharacterClass: Int {
-    case Hunter = 0
-    case Knight
-    case Cleric
-    case Prophet
+    case Resilient = 0
+    case Deadly
+    case Persistent
+    case Mad
 }
 
 class PlayerObject: CharacterObject {
-    var lck = 0.0
-    var reg = 0.0
+    var lck = 2.0
+    var reg = 0.1
     var sty = 100.0
     var expNeeded = 20.0
     
@@ -29,16 +29,40 @@ class PlayerObject: CharacterObject {
     
     //MARK: - Initialization Methods
     
-    class func initHero(map: CAMap) -> PlayerObject {
+    class func initHero(map: CAMap, type: CharacterClass) -> PlayerObject {
         let hero = PlayerObject()
         hero.displayView = UIView(frame: CGRectMake(0, 0, map.cellSize, map.cellSize))
         hero.characterIV = UIImageView(frame: hero.displayView.frame)
-        hero.characterIV.image = UIImage(named: "hunter")
         hero.displayView.addSubview(hero.characterIV)
-        hero.atk = 3.0
+        
+        hero.atk = 2.0
         hero.maxHP = 10.0
         hero.curHP = hero.maxHP
-        hero.type = .Hunter
+        hero.type = type
+        
+        //Finish starting stats
+        if type == .Resilient {
+            hero.characterIV.image = UIImage(named: "knight")
+            hero.def += 2.0
+            hero.maxHP += 5.0
+        }
+        
+        else if type == .Deadly {
+            hero.characterIV.image = UIImage(named: "hunter")
+            hero.atk += 2.0
+            hero.lck += 3.0
+        }
+        
+        else if type == .Persistent {
+            hero.characterIV.image = UIImage(named: "cleric")
+            hero.reg += 0.2
+        }
+        
+        else if type == .Mad {
+            hero.characterIV.image = UIImage(named: "prophet")
+            hero.sty = 50.0
+        }
+        
         return hero
     }
     
@@ -131,13 +155,29 @@ class PlayerObject: CharacterObject {
         heal(reg)
     }
     
+    func loseSanity(amt: Double) -> Bool {
+        //The Madman does not lose sanity
+        if type == .Mad { return false }
+        
+        sty -= amt
+        
+        //If sanity drops to zero, the character goes insane
+        if sty <= 0 { return true }
+        
+        return false
+    }
+    
     //MARK: - Experience Methods
     
     func gainExp(expGain: Double) -> Bool {
-        exp += expGain
+        let sanityBoost = expGain - (expGain * (sty/100.0))
+        exp += expGain + sanityBoost
         
         if exp >= expNeeded {
-            levelUp()
+            while exp > expNeeded {
+                levelUp()
+            }
+            
             return true
         }
         
@@ -149,28 +189,28 @@ class PlayerObject: CharacterObject {
         lvl += 1
         expNeeded = pow(Double(lvl), 2) * 10
         
-        if type == .Hunter {
-            atk += 1.2
-            def += 1.0
-            maxHP += 5.0
-            lck += 1.2
-            reg += 0.01
-        }
-            
-        else if type == .Knight {
+        if type == .Resilient {
             atk += 1.0
             def += 1.2
             maxHP += 7.0
             lck += 1.0
-            reg += 0.01
+            reg += 0.05
         }
             
-        else if type == .Cleric {
+        else if type == .Deadly {
+            atk += 1.2
+            def += 1.0
+            maxHP += 5.0
+            lck += 1.2
+            reg += 0.05
+        }
+            
+        else if type == .Persistent {
             atk += 1.0
             def += 1.0
             maxHP += 6.0
             lck += 1.0
-            reg += 0.02
+            reg += 0.1
         }
             
         else {
@@ -178,7 +218,7 @@ class PlayerObject: CharacterObject {
             def += 1.1
             maxHP += 6.0
             lck += 1.1
-            reg += 0.01
+            reg += 0.05
         }
     }
 }

@@ -7,6 +7,14 @@
         <mutableArray key="Benegraphic.ttf">
             <string>Benegraphic</string>
             <string>Benegraphic</string>
+            <string>Benegraphic</string>
+            <string>Benegraphic</string>
+            <string>Benegraphic</string>
+            <string>Benegraphic</string>
+            <string>Benegraphic</string>
+            <string>Benegraphic</string>
+            <string>Benegraphic</string>
+            <string>Benegraphic</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -88,7 +96,7 @@
             </objects>
             <point key="canvasLocation" x="404" y="548"/>
         </scene>
-        <!--Data Source-->
+        <!--Character Select View Controller-->
         <scene sceneID="CMd-wh-A70">
             <objects>
                 <viewController id="wOe-y7-PSq" customClass="CharacterSelectViewController" customModule="Roguelike" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,34 +108,203 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select Character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHc-p4-9IH">
-                                <rect key="frame" x="231" y="28" width="137" height="37"/>
-                                <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvF-yM-xVH" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="73" width="600" height="450"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="wOe-y7-PSq" id="oG4-ui-gFl"/>
-                                    <outlet property="delegate" destination="wOe-y7-PSq" id="nVn-Rn-tSE"/>
-                                </connections>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2W6-om-FaM">
-                                <rect key="frame" x="253" y="531" width="94" height="49"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WvJ-6W-Njy">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Hero was..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHc-p4-9IH">
+                                        <rect key="frame" x="233.5" y="8" width="132" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="132" id="i3r-dg-u3F"/>
+                                            <constraint firstAttribute="height" constant="37" id="tKs-Oe-9BJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2W6-om-FaM">
+                                        <rect key="frame" x="253" y="561" width="94" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="f12-ro-Hja"/>
+                                            <constraint firstAttribute="width" constant="94" id="l4R-31-IVW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="36"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                        <state key="normal" title="Go Forth...">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goPressed:" destination="wOe-y7-PSq" eventType="touchUpInside" id="uUY-Ue-moV"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xio-K1-JZf" customClass="CharacterSelectView" customModule="Roguelike" customModuleProvider="target">
+                                        <rect key="frame" x="140" y="69" width="320" height="111"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="knight" translatesAutoresizingMaskIntoConstraints="NO" id="Uua-wF-IQ0">
+                                                <rect key="frame" x="16" y="30" width="50" height="50"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resilient" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0f-9U-9k1">
+                                                <rect key="frame" x="82" y="8" width="71" height="37"/>
+                                                <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="36"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izj-56-Ezg">
+                                                <rect key="frame" x="82" y="53" width="234" height="50"/>
+                                                <string key="text">A tenacious fighter who can
+weather any blow</string>
+                                                <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl7-ga-vyb">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+                                                <connections>
+                                                    <action selector="classPressed:" destination="wOe-y7-PSq" eventType="touchUpInside" id="OcQ-ro-dZi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="oeq-Sg-FVf"/>
+                                            <constraint firstAttribute="height" constant="111" id="rRK-Wt-3ON"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="characterIV" destination="Uua-wF-IQ0" id="ufG-Cn-1NB"/>
+                                            <outlet property="classLbl" destination="i0f-9U-9k1" id="dle-9g-1Tc"/>
+                                            <outlet property="descriptionLbl" destination="izj-56-Ezg" id="bq0-Qm-uwY"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emC-q7-9yb" customClass="CharacterSelectView" customModule="Roguelike" customModuleProvider="target">
+                                        <rect key="frame" x="140" y="188" width="320" height="111"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deadly" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73Y-7l-UAE">
+                                                <rect key="frame" x="178" y="8" width="60" height="37"/>
+                                                <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="36"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laV-gS-awi">
+                                                <rect key="frame" x="8" y="53" width="230" height="50"/>
+                                                <string key="text">A fierce warrior who takes the
+fight to the enemy</string>
+                                                <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hunter" translatesAutoresizingMaskIntoConstraints="NO" id="uTj-um-eiq">
+                                                <rect key="frame" x="254" y="31" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5C-Vi-vzg">
+                                                <rect key="frame" x="0.0" y="1" width="320" height="111"/>
+                                                <connections>
+                                                    <action selector="classPressed:" destination="wOe-y7-PSq" eventType="touchUpInside" id="Mbj-zs-Mmf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="111" id="0s6-ZD-Tm8"/>
+                                            <constraint firstAttribute="width" constant="320" id="O6X-0D-Upb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="characterIV" destination="uTj-um-eiq" id="jbK-Wy-p60"/>
+                                            <outlet property="classLbl" destination="73Y-7l-UAE" id="Lpy-De-HWa"/>
+                                            <outlet property="descriptionLbl" destination="laV-gS-awi" id="Mte-to-y6e"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDl-ZJ-8fV" customClass="CharacterSelectView" customModule="Roguelike" customModuleProvider="target">
+                                        <rect key="frame" x="140" y="307" width="320" height="111"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cleric" translatesAutoresizingMaskIntoConstraints="NO" id="9kw-Re-ynf">
+                                                <rect key="frame" x="16" y="30" width="50" height="50"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Persistent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr5-gH-J0g">
+                                                <rect key="frame" x="82" y="8" width="85" height="37"/>
+                                                <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="36"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlA-9Q-NxA">
+                                                <rect key="frame" x="82" y="53" width="218" height="50"/>
+                                                <string key="text">A steady combatant who chooses
+their battles wisely</string>
+                                                <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vzh-VF-pEy">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+                                                <connections>
+                                                    <action selector="classPressed:" destination="wOe-y7-PSq" eventType="touchUpInside" id="Nhz-Rl-D74"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="111" id="vNu-dE-dSP"/>
+                                            <constraint firstAttribute="width" constant="320" id="yPX-Hs-4f3"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="characterIV" destination="9kw-Re-ynf" id="hxB-vm-Xk1"/>
+                                            <outlet property="classLbl" destination="xr5-gH-J0g" id="2o9-12-GBn"/>
+                                            <outlet property="descriptionLbl" destination="zlA-9Q-NxA" id="PK1-ye-sSo"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMb-5o-HDS" customClass="CharacterSelectView" customModule="Roguelike" customModuleProvider="target">
+                                        <rect key="frame" x="140" y="426" width="320" height="111"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mad" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzQ-BH-XHL">
+                                                <rect key="frame" x="203" y="8" width="36" height="37"/>
+                                                <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="36"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN7-im-bd4">
+                                                <rect key="frame" x="8" y="53" width="231" height="50"/>
+                                                <string key="text">A man some call mad, but
+what secrets has he seen?</string>
+                                                <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prophet" translatesAutoresizingMaskIntoConstraints="NO" id="YTh-VE-cT9">
+                                                <rect key="frame" x="255" y="31" width="50" height="50"/>
+                                            </imageView>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kc-F0-bin">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="111"/>
+                                                <connections>
+                                                    <action selector="classPressed:" destination="wOe-y7-PSq" eventType="touchUpInside" id="UmX-TN-BaA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="QwV-G6-aSx"/>
+                                            <constraint firstAttribute="height" constant="111" id="XYj-wm-qN0"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="characterIV" destination="YTh-VE-cT9" id="cf7-u2-xMJ"/>
+                                            <outlet property="classLbl" destination="LzQ-BH-XHL" id="G3h-Wg-JmW"/>
+                                            <outlet property="descriptionLbl" destination="NN7-im-bd4" id="Oe7-eS-4gF"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="s04-6h-slp"/>
+                                    <constraint firstItem="KDl-ZJ-8fV" firstAttribute="top" secondItem="emC-q7-9yb" secondAttribute="bottom" constant="8" id="KQc-q2-WBt"/>
+                                    <constraint firstItem="2W6-om-FaM" firstAttribute="centerX" secondItem="WvJ-6W-Njy" secondAttribute="centerX" id="QXF-bB-264"/>
+                                    <constraint firstItem="2W6-om-FaM" firstAttribute="top" secondItem="rMb-5o-HDS" secondAttribute="bottom" constant="24" id="R0g-PD-xEJ"/>
+                                    <constraint firstItem="xio-K1-JZf" firstAttribute="top" secondItem="rHc-p4-9IH" secondAttribute="bottom" constant="24" id="RiN-MF-5Nm"/>
+                                    <constraint firstItem="emC-q7-9yb" firstAttribute="centerX" secondItem="WvJ-6W-Njy" secondAttribute="centerX" id="bGQ-Mu-DMD"/>
+                                    <constraint firstItem="emC-q7-9yb" firstAttribute="top" secondItem="xio-K1-JZf" secondAttribute="bottom" constant="8" id="e0w-Wz-ub0"/>
+                                    <constraint firstItem="rMb-5o-HDS" firstAttribute="centerX" secondItem="WvJ-6W-Njy" secondAttribute="centerX" id="gSp-Ih-wFb"/>
+                                    <constraint firstItem="rHc-p4-9IH" firstAttribute="top" secondItem="WvJ-6W-Njy" secondAttribute="top" constant="8" id="mGm-Bd-1Dd"/>
+                                    <constraint firstItem="rHc-p4-9IH" firstAttribute="centerX" secondItem="WvJ-6W-Njy" secondAttribute="centerX" id="na8-sD-b3i"/>
+                                    <constraint firstItem="xio-K1-JZf" firstAttribute="centerX" secondItem="WvJ-6W-Njy" secondAttribute="centerX" id="ppz-0e-Jup"/>
+                                    <constraint firstAttribute="bottom" secondItem="2W6-om-FaM" secondAttribute="bottom" constant="24" id="pqz-Ze-PKr"/>
+                                    <constraint firstItem="KDl-ZJ-8fV" firstAttribute="centerX" secondItem="WvJ-6W-Njy" secondAttribute="centerX" id="t98-Yf-37M"/>
+                                    <constraint firstItem="rMb-5o-HDS" firstAttribute="top" secondItem="KDl-ZJ-8fV" secondAttribute="bottom" constant="8" id="tcB-ID-qZC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Benegraphic" family="Benegraphic" pointSize="36"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Go Forth...">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="goPressed:" destination="wOe-y7-PSq" eventType="touchUpInside" id="uUY-Ue-moV"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNk-Hm-0qa">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -135,23 +312,24 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tNk-Hm-0qa" firstAttribute="leading" secondItem="XMn-g6-Cfx" secondAttribute="leading" id="2Mf-Zi-fTR"/>
-                            <constraint firstItem="rHc-p4-9IH" firstAttribute="top" secondItem="KSX-bS-3fm" secondAttribute="bottom" constant="8" id="7Ua-cp-Kw3"/>
-                            <constraint firstItem="rHc-p4-9IH" firstAttribute="centerX" secondItem="XMn-g6-Cfx" secondAttribute="centerX" id="7ov-Xl-Xh6"/>
-                            <constraint firstItem="jnN-hX-LZX" firstAttribute="top" secondItem="2W6-om-FaM" secondAttribute="bottom" constant="20" id="JYz-l8-jin"/>
-                            <constraint firstItem="jnN-hX-LZX" firstAttribute="top" secondItem="dvF-yM-xVH" secondAttribute="bottom" constant="77" id="KPL-EL-wB8"/>
-                            <constraint firstAttribute="trailing" secondItem="tNk-Hm-0qa" secondAttribute="trailing" id="ML2-Y3-vJg"/>
-                            <constraint firstItem="dvF-yM-xVH" firstAttribute="leading" secondItem="XMn-g6-Cfx" secondAttribute="leading" id="PqJ-1h-kn4"/>
-                            <constraint firstItem="jnN-hX-LZX" firstAttribute="top" secondItem="tNk-Hm-0qa" secondAttribute="bottom" id="U8w-Lb-pAw"/>
-                            <constraint firstAttribute="trailing" secondItem="dvF-yM-xVH" secondAttribute="trailing" id="VZt-e5-fSZ"/>
-                            <constraint firstItem="2W6-om-FaM" firstAttribute="centerX" secondItem="XMn-g6-Cfx" secondAttribute="centerX" id="Ww9-yO-VjB"/>
-                            <constraint firstItem="tNk-Hm-0qa" firstAttribute="top" secondItem="XMn-g6-Cfx" secondAttribute="top" id="dUt-T9-l7X"/>
-                            <constraint firstItem="dvF-yM-xVH" firstAttribute="top" secondItem="rHc-p4-9IH" secondAttribute="bottom" constant="8" id="jE9-5v-ewk"/>
+                            <constraint firstItem="WvJ-6W-Njy" firstAttribute="top" secondItem="KSX-bS-3fm" secondAttribute="bottom" id="2tx-ZF-hH3"/>
+                            <constraint firstAttribute="trailing" secondItem="tNk-Hm-0qa" secondAttribute="trailing" id="K6m-fr-ejc"/>
+                            <constraint firstItem="WvJ-6W-Njy" firstAttribute="leading" secondItem="XMn-g6-Cfx" secondAttribute="leading" id="RD9-Aj-DtJ"/>
+                            <constraint firstItem="jnN-hX-LZX" firstAttribute="top" secondItem="WvJ-6W-Njy" secondAttribute="bottom" id="dbs-L3-EVl"/>
+                            <constraint firstItem="jnN-hX-LZX" firstAttribute="top" secondItem="tNk-Hm-0qa" secondAttribute="bottom" id="gfF-Pw-PWp"/>
+                            <constraint firstItem="tNk-Hm-0qa" firstAttribute="leading" secondItem="XMn-g6-Cfx" secondAttribute="leading" id="oEq-9h-DEh"/>
+                            <constraint firstAttribute="trailing" secondItem="WvJ-6W-Njy" secondAttribute="trailing" id="quy-c2-Z3l"/>
+                            <constraint firstItem="tNk-Hm-0qa" firstAttribute="top" secondItem="KSX-bS-3fm" secondAttribute="bottom" id="tKn-Rj-UwP"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="carousel" destination="dvF-yM-xVH" id="Jc0-pU-7fB"/>
+                        <outlet property="deadlyBtn" destination="e5C-Vi-vzg" id="y0y-v9-TGg"/>
+                        <outlet property="goBtn" destination="2W6-om-FaM" id="GKl-Nb-ger"/>
+                        <outlet property="madBtn" destination="4kc-F0-bin" id="pgh-gR-uoh"/>
                         <outlet property="maskView" destination="tNk-Hm-0qa" id="ZC1-gA-bTK"/>
+                        <outlet property="persistentBtn" destination="vzh-VF-pEy" id="Stp-AT-ZA3"/>
+                        <outlet property="resilientBtn" destination="vl7-ga-vyb" id="fAG-GA-LI2"/>
                         <segue destination="1NE-hf-4mh" kind="show" identifier="pushPortal" id="yIO-eY-eX7"/>
                     </connections>
                 </viewController>
@@ -193,4 +371,10 @@
             <point key="canvasLocation" x="1816" y="548"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cleric" width="24" height="24"/>
+        <image name="hunter" width="24" height="24"/>
+        <image name="knight" width="24" height="24"/>
+        <image name="prophet" width="24" height="24"/>
+    </resources>
 </document>

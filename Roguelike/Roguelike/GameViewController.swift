@@ -18,6 +18,7 @@ class GameViewController: UIViewController {
     
     var game: GameObject!
     weak var delegate:GameViewControllerDelegate?
+    var characterType: CharacterClass!
     
     var fadeSpeed = 3.0
     var leftSwipe: UISwipeGestureRecognizer!
@@ -227,7 +228,7 @@ class GameViewController: UIViewController {
     
     func addPlayer() {
         if game.player == nil {
-            game.player = PlayerObject.initHero(game.map)
+            game.player = PlayerObject.initHero(game.map, type: characterType)
         }
         
         game.player.coordinates = game.map.spawnCoordinates
@@ -273,7 +274,7 @@ class GameViewController: UIViewController {
                         enemy.killUnit(game)
                         
                         if game.player.gainExp(enemy.exp) {
-                            print("LEVEL UP!")
+                            LabelHelper.showString("LEVEL UP!", view: game.player.displayView)
                         }
                     }
                 }

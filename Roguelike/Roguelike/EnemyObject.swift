@@ -158,9 +158,10 @@ class EnemyObject: CharacterObject {
             }, completion: { (Bool) in
                 UIView.animateWithDuration(0.1, animations: {
                     self.displayView.center = oldCenter
-                    hero.takeDamage(self.atk)
                 })
         })
+        
+        hero.takeDamage(self.atk)
     }
     
     //MARK: - Modification Methods

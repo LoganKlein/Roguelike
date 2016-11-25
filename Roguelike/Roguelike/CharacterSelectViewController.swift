@@ -7,21 +7,59 @@
 //
 
 import UIKit
-import iCarousel
 
 class CharacterSelectViewController: UIViewController {
-    @IBOutlet var carousel: iCarousel!
     @IBOutlet var maskView: UIView!
-    let classes: [String] = ["Hunter", "Knight", "Cleric"]
-
+    @IBOutlet var resilientBtn: UIButton!
+    @IBOutlet var deadlyBtn: UIButton!
+    @IBOutlet var persistentBtn: UIButton!
+    @IBOutlet var madBtn: UIButton!
+    @IBOutlet var goBtn: UIButton!
+    var selectedType = 0
+    
+    //MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        carousel.type = .Linear
-        carousel.delegate = self
+        let radius:CGFloat = 10.0
+        let width: CGFloat = 3.0
+        resilientBtn.layer.cornerRadius = radius
+        resilientBtn.layer.borderWidth = width
+        resilientBtn.layer.borderColor = UIColor.clearColor().CGColor
+        
+        deadlyBtn.layer.cornerRadius = radius
+        deadlyBtn.layer.borderWidth = width
+        deadlyBtn.layer.borderColor = UIColor.clearColor().CGColor
+        
+        persistentBtn.layer.cornerRadius = radius
+        persistentBtn.layer.borderWidth = width
+        persistentBtn.layer.borderColor = UIColor.clearColor().CGColor
+        
+        madBtn.layer.cornerRadius = radius
+        madBtn.layer.borderWidth = width
+        madBtn.layer.borderColor = UIColor.clearColor().CGColor
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if(segue.identifier == "pushPortal") {
+            (segue.destinationViewController as! PortalViewController).characterType = CharacterClass(rawValue: selectedType)
+        }
     }
     
     // MARK: - IBActions
+    
+    @IBAction func classPressed(sender: UIButton) {
+        resilientBtn.layer.borderColor = UIColor.clearColor().CGColor
+        deadlyBtn.layer.borderColor = UIColor.clearColor().CGColor
+        persistentBtn.layer.borderColor = UIColor.clearColor().CGColor
+        madBtn.layer.borderColor = UIColor.clearColor().CGColor
+        
+        sender.layer.borderColor = UIColor.whiteColor().CGColor
+        selectedType = sender.tag
+        goBtn.alpha = 1
+        goBtn.enabled = true
+    }
     
     @IBAction func goPressed(sender: UIButton) {
         fadeToBlack()
@@ -36,31 +74,4 @@ class CharacterSelectViewController: UIViewController {
                 self.performSegueWithIdentifier("pushPortal", sender: nil)
         }
     }
-}
-
-extension CharacterSelectViewController: iCarouselDataSource {
-    func numberOfItemsInCarousel(carousel: iCarousel) -> Int {
-        return classes.count
-    }
-    
-    func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView {
-        let csView: CharacterSelectView
-        let aClass = classes[index]
-        
-        if view != nil {
-            csView = view as! CharacterSelectView
-        }
-        
-        else {
-            let xib = NSBundle.mainBundle().loadNibNamed("CharacterSelectView", owner: self, options: nil)
-            csView = xib[0] as! CharacterSelectView
-        }
-        
-        csView.populateWithClass(aClass)
-        return csView
-    }
-}
-
-extension CharacterSelectViewController: iCarouselDelegate {
-    
 }

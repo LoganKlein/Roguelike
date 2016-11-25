@@ -35,7 +35,7 @@ class CharacterObject: NSObject {
     
     func takeDamage(dmg: Double) -> Bool {
         let dmgTaken = max(dmg - def, 0)
-        NumberHelper.showNumber(Int(dmgTaken * -1), view: self.displayView)
+        LabelHelper.showNumber(Int(dmgTaken * -1), view: self.displayView)
         
         curHP -= dmgTaken
         

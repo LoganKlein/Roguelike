@@ -10,7 +10,7 @@
 		5D6B65271DDCF39100A93480 /* consumables.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D6B65261DDCF39100A93480 /* consumables.json */; };
 		5D7A57F51DD517F500ADD026 /* CharacterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A57F41DD517F500ADD026 /* CharacterObject.swift */; };
 		5D7A57F71DD5307B00ADD026 /* CollisionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A57F61DD5307B00ADD026 /* CollisionHelper.swift */; };
-		5D7A57FD1DD62F1600ADD026 /* NumberHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A57FC1DD62F1600ADD026 /* NumberHelper.swift */; };
+		5D7A57FD1DD62F1600ADD026 /* LabelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A57FC1DD62F1600ADD026 /* LabelHelper.swift */; };
 		5D7A58061DD65DB600ADD026 /* GameMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A58051DD65DB600ADD026 /* GameMap.swift */; };
 		5D7A58081DD65E8300ADD026 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A58071DD65E8300ADD026 /* Extensions.swift */; };
 		5D7A580A1DD65ED200ADD026 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A58091DD65ED200ADD026 /* GameViewController.swift */; };
@@ -70,7 +70,7 @@
 		5D6B65261DDCF39100A93480 /* consumables.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = consumables.json; sourceTree = "<group>"; };
 		5D7A57F41DD517F500ADD026 /* CharacterObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterObject.swift; sourceTree = "<group>"; };
 		5D7A57F61DD5307B00ADD026 /* CollisionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionHelper.swift; sourceTree = "<group>"; };
-		5D7A57FC1DD62F1600ADD026 /* NumberHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberHelper.swift; sourceTree = "<group>"; };
+		5D7A57FC1DD62F1600ADD026 /* LabelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelHelper.swift; sourceTree = "<group>"; };
 		5D7A58051DD65DB600ADD026 /* GameMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMap.swift; sourceTree = "<group>"; };
 		5D7A58071DD65E8300ADD026 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5D7A58091DD65ED200ADD026 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -302,7 +302,7 @@
 			children = (
 				5D7A58071DD65E8300ADD026 /* Extensions.swift */,
 				5D7A57F61DD5307B00ADD026 /* CollisionHelper.swift */,
-				5D7A57FC1DD62F1600ADD026 /* NumberHelper.swift */,
+				5D7A57FC1DD62F1600ADD026 /* LabelHelper.swift */,
 				5D7D1F0B1DDE9FA100AC6E37 /* JSONHelper.swift */,
 			);
 			name = Helpers;
@@ -606,7 +606,7 @@
 				5DECA8F51DD10D1D0001EFE7 /* PortalViewController.swift in Sources */,
 				5D7D1F081DDE947800AC6E37 /* EnemyObject.swift in Sources */,
 				5D7A580F1DD6634A00ADD026 /* GameObject.swift in Sources */,
-				5D7A57FD1DD62F1600ADD026 /* NumberHelper.swift in Sources */,
+				5D7A57FD1DD62F1600ADD026 /* LabelHelper.swift in Sources */,
 				5D7A580A1DD65ED200ADD026 /* GameViewController.swift in Sources */,
 				5DECA8F11DD10BAF0001EFE7 /* MenuViewController.swift in Sources */,
 			);

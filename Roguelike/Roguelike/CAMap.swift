@@ -54,8 +54,8 @@ class CAMap: GameMap {
         
         visitedLocations = []
         
-        let treasureCount = max(floor/3, 1)
-        let enemyCount = max(floor/2, 1)
+        let treasureCount = max(floor/10, 1)
+        let enemyCount = max(floor/5, 1)
         findUniqueLocations(treasureCount, enemies: enemyCount)
     }
     
@@ -85,7 +85,7 @@ class CAMap: GameMap {
                     if(nbs < deathLimit) { newMap[y][x] = false }
                     else { newMap[y][x] = true }
                 }
-                    
+                
                 else {
                     if(nbs > birthLimit) { newMap[y][x] = true }
                     else { newMap[y][x] = false }
