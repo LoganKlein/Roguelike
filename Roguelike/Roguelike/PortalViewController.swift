@@ -10,6 +10,8 @@ import UIKit
 
 class PortalViewController: GameViewController {
     
+    @IBOutlet var talkBtn: UIButton!
+    
     //MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -43,16 +45,21 @@ class PortalViewController: GameViewController {
         }
         
         displayMap()
+        self.view.bringSubviewToFront(talkBtn)
+    }
+    
+    func startDialogue() {
+        let dialogue1 = DialogueInfo(left: "hunter", right: nil, text: "The protagonist says: Hey dude, where am I?")
+        let dialogue2 = DialogueInfo(left: nil, right: "enemy", text: "The enemy says: Raaaargh, *teeth gnashing & general unpleasantness*")
+        let dialogue3 = DialogueInfo(left: "hunter", right: nil, text: "HOLY CHRIST, WHAT'S WRONG WITH YOU!?!?!")
+        let chain = [dialogue1, dialogue2, dialogue3]
+        DialogueView.generateInView(self, dialogue: chain)
     }
     
     //MARK: - IBActions
     
-    @IBAction func backPressed(sender: UIButton) {
-        self.navigationController?.popViewControllerAnimated(true)
-    }
-    
-    @IBAction func rebuildPressed(sender: UIButton) {
-        createMap()
+    @IBAction func talkPressed(sender: UIButton) {
+        startDialogue()
     }
 }
 

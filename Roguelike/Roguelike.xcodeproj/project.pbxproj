@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D5B50FA1DEDEBF000E2C662 /* DialogueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B50F91DEDEBF000E2C662 /* DialogueView.swift */; };
+		5D5B50FC1DEDEBFF00E2C662 /* DialogueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B50FB1DEDEBFF00E2C662 /* DialogueView.xib */; };
+		5D5B50FE1DEDEEB200E2C662 /* DialogueInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B50FD1DEDEEB200E2C662 /* DialogueInfo.swift */; };
 		5D6B65271DDCF39100A93480 /* consumables.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D6B65261DDCF39100A93480 /* consumables.json */; };
 		5D7A57F51DD517F500ADD026 /* CharacterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A57F41DD517F500ADD026 /* CharacterObject.swift */; };
 		5D7A57F71DD5307B00ADD026 /* CollisionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7A57F61DD5307B00ADD026 /* CollisionHelper.swift */; };
@@ -67,6 +70,9 @@
 		1ECEC62246DBFDFD859D7734 /* Pods_RoguelikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoguelikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C81B6916AD8CFD203FD20B /* Pods_RoguelikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoguelikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FAD65ED4165A1136B512911 /* Pods-Roguelike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roguelike.release.xcconfig"; path = "Pods/Target Support Files/Pods-Roguelike/Pods-Roguelike.release.xcconfig"; sourceTree = "<group>"; };
+		5D5B50F91DEDEBF000E2C662 /* DialogueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogueView.swift; sourceTree = "<group>"; };
+		5D5B50FB1DEDEBFF00E2C662 /* DialogueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DialogueView.xib; sourceTree = "<group>"; };
+		5D5B50FD1DEDEEB200E2C662 /* DialogueInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogueInfo.swift; sourceTree = "<group>"; };
 		5D6B65261DDCF39100A93480 /* consumables.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = consumables.json; sourceTree = "<group>"; };
 		5D7A57F41DD517F500ADD026 /* CharacterObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterObject.swift; sourceTree = "<group>"; };
 		5D7A57F61DD5307B00ADD026 /* CollisionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionHelper.swift; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				5D7A580E1DD6634A00ADD026 /* GameObject.swift */,
+				5D5B50FD1DEDEEB200E2C662 /* DialogueInfo.swift */,
 			);
 			name = "Game Objects";
 			sourceTree = "<group>";
@@ -222,6 +229,8 @@
 				5D82AF9F1DDA3ED000750161 /* HUDView.xib */,
 				5D9E42031DDE22A600597C9E /* ItemHUDView.swift */,
 				5D9E42051DDE22AE00597C9E /* ItemHUDView.xib */,
+				5D5B50F91DEDEBF000E2C662 /* DialogueView.swift */,
+				5D5B50FB1DEDEBFF00E2C662 /* DialogueView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -431,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DB386F81DDB7B0B00240C55 /* buffs.json in Resources */,
+				5D5B50FC1DEDEBFF00E2C662 /* DialogueView.xib in Resources */,
 				5DECA8CD1DD10B870001EFE7 /* LaunchScreen.storyboard in Resources */,
 				5DB386F71DDB7B0B00240C55 /* armor.json in Resources */,
 				5DECA8CA1DD10B870001EFE7 /* Assets.xcassets in Resources */,
@@ -598,10 +608,12 @@
 				5D7A58171DD6AD3100ADD026 /* ItemObject.swift in Sources */,
 				5D7A58081DD65E8300ADD026 /* Extensions.swift in Sources */,
 				5D7A58111DD6912C00ADD026 /* CharacterSelectViewController.swift in Sources */,
+				5D5B50FE1DEDEEB200E2C662 /* DialogueInfo.swift in Sources */,
 				5D7D1F0C1DDE9FA100AC6E37 /* JSONHelper.swift in Sources */,
 				5D9E42041DDE22A600597C9E /* ItemHUDView.swift in Sources */,
 				5D7A57F51DD517F500ADD026 /* CharacterObject.swift in Sources */,
 				5D7D1F0A1DDE94EC00AC6E37 /* PlayerObject.swift in Sources */,
+				5D5B50FA1DEDEBF000E2C662 /* DialogueView.swift in Sources */,
 				5D956BC41DD81CD30073CEC8 /* CharacterSelectView.swift in Sources */,
 				5DECA8F51DD10D1D0001EFE7 /* PortalViewController.swift in Sources */,
 				5D7D1F081DDE947800AC6E37 /* EnemyObject.swift in Sources */,

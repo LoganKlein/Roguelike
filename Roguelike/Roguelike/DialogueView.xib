@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DialogueView" customModule="Roguelike" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hunter" translatesAutoresizingMaskIntoConstraints="NO" id="ZY9-MT-zNc">
+                    <rect key="frame" x="0.0" y="311" width="24" height="24"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="F5L-Fh-UTh">
+                    <rect key="frame" x="576" y="311" width="24" height="24"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsC-GJ-uO9">
+                    <rect key="frame" x="0.0" y="335" width="600" height="265"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uf9-Pr-pWp">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="265"/>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jI8-2N-Gdr">
+                            <rect key="frame" x="24" y="24" width="552" height="217"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Uf9-Pr-pWp" firstAttribute="top" secondItem="dsC-GJ-uO9" secondAttribute="top" id="52Q-lB-pTg"/>
+                        <constraint firstItem="jI8-2N-Gdr" firstAttribute="top" secondItem="dsC-GJ-uO9" secondAttribute="top" constant="24" id="9YE-u5-fDY"/>
+                        <constraint firstAttribute="trailing" secondItem="jI8-2N-Gdr" secondAttribute="trailing" constant="24" id="FV8-35-KOm"/>
+                        <constraint firstAttribute="trailing" secondItem="Uf9-Pr-pWp" secondAttribute="trailing" id="Hsa-Tf-uWw"/>
+                        <constraint firstAttribute="height" constant="265" id="JIR-M5-C3A"/>
+                        <constraint firstItem="jI8-2N-Gdr" firstAttribute="leading" secondItem="dsC-GJ-uO9" secondAttribute="leading" constant="24" id="UN1-oR-yFZ"/>
+                        <constraint firstItem="Uf9-Pr-pWp" firstAttribute="leading" secondItem="dsC-GJ-uO9" secondAttribute="leading" id="bzI-hu-fXa"/>
+                        <constraint firstAttribute="bottom" secondItem="jI8-2N-Gdr" secondAttribute="bottom" constant="24" id="c3d-l9-qKo"/>
+                        <constraint firstAttribute="bottom" secondItem="Uf9-Pr-pWp" secondAttribute="bottom" id="iV7-3x-K4g"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dsC-GJ-uO9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3ii-dn-1Qs"/>
+                <constraint firstItem="dsC-GJ-uO9" firstAttribute="top" secondItem="F5L-Fh-UTh" secondAttribute="bottom" id="4f6-mM-ooR"/>
+                <constraint firstAttribute="bottom" secondItem="dsC-GJ-uO9" secondAttribute="bottom" id="ckD-Yd-Vip"/>
+                <constraint firstItem="dsC-GJ-uO9" firstAttribute="top" secondItem="ZY9-MT-zNc" secondAttribute="bottom" id="fS7-A4-uYR"/>
+                <constraint firstItem="ZY9-MT-zNc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ky1-lN-KX1"/>
+                <constraint firstAttribute="trailing" secondItem="F5L-Fh-UTh" secondAttribute="trailing" id="r9A-PY-UOm"/>
+                <constraint firstAttribute="trailing" secondItem="dsC-GJ-uO9" secondAttribute="trailing" id="wa0-xN-3Hs"/>
+            </constraints>
+            <connections>
+                <outlet property="holderView" destination="dsC-GJ-uO9" id="Ozt-gx-9Ny"/>
+                <outlet property="leftIV" destination="ZY9-MT-zNc" id="byT-Yq-rQP"/>
+                <outlet property="mainTextView" destination="jI8-2N-Gdr" id="WZ5-ic-y8w"/>
+                <outlet property="rightIV" destination="F5L-Fh-UTh" id="jQt-3E-U4A"/>
+                <outlet property="textBackerIV" destination="Uf9-Pr-pWp" id="5Dc-xe-0bZ"/>
+            </connections>
+            <point key="canvasLocation" x="355" y="326"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="enemy" width="24" height="24"/>
+        <image name="hunter" width="24" height="24"/>
+    </resources>
+</document>

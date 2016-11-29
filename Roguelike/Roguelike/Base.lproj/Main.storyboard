@@ -353,17 +353,27 @@ what secrets has he seen?</string>
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sB-2z-7id">
+                                <rect key="frame" x="257" y="285" width="87" height="30"/>
+                                <state key="normal" title="Start Talking"/>
+                                <connections>
+                                    <action selector="talkPressed:" destination="1NE-hf-4mh" eventType="touchUpInside" id="1jc-Cg-UIq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="oKA-W5-JlL" secondAttribute="trailing" id="2JJ-8p-AfV"/>
+                            <constraint firstItem="1sB-2z-7id" firstAttribute="centerX" secondItem="QOw-3c-rGx" secondAttribute="centerX" id="879-CW-XXL"/>
                             <constraint firstItem="vfm-ZC-9uW" firstAttribute="top" secondItem="oKA-W5-JlL" secondAttribute="bottom" id="TeK-KD-TZw"/>
                             <constraint firstItem="oKA-W5-JlL" firstAttribute="leading" secondItem="QOw-3c-rGx" secondAttribute="leading" id="VhD-wQ-O2n"/>
+                            <constraint firstItem="1sB-2z-7id" firstAttribute="centerY" secondItem="QOw-3c-rGx" secondAttribute="centerY" id="diM-Ps-lBE"/>
                             <constraint firstItem="oKA-W5-JlL" firstAttribute="top" secondItem="QOw-3c-rGx" secondAttribute="top" id="w7j-93-U7T"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="maskView" destination="oKA-W5-JlL" id="Sma-6U-NAn"/>
+                        <outlet property="talkBtn" destination="1sB-2z-7id" id="40o-FW-6vs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pJ-1k-DVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
