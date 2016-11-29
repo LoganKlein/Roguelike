@@ -119,6 +119,10 @@ class DialogueView: UIView {
         if currentDialogue >= 0 {
             showDialogueInfo(dialogueChain[currentDialogue])
         }
+        
+        else {
+            currentDialogue = 0
+        }
     }
     
     func tap(recognizer: UITapGestureRecognizer) {

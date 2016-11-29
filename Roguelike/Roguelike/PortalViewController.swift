@@ -10,8 +10,6 @@ import UIKit
 
 class PortalViewController: GameViewController {
     
-    @IBOutlet var talkBtn: UIButton!
-    
     //MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -45,7 +43,6 @@ class PortalViewController: GameViewController {
         }
         
         displayMap()
-        self.view.bringSubviewToFront(talkBtn)
     }
     
     func startDialogue() {

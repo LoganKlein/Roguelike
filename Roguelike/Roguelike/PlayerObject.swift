@@ -45,6 +45,7 @@ class PlayerObject: CharacterObject {
             hero.characterIV.image = UIImage(named: "knight")
             hero.def += 2.0
             hero.maxHP += 5.0
+            hero.curHP = hero.maxHP
         }
         
         else if type == .Deadly {
