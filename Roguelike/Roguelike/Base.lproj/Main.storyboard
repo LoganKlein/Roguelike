@@ -136,7 +136,7 @@
                                             <action selector="goPressed:" destination="wOe-y7-PSq" eventType="touchUpInside" id="uUY-Ue-moV"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xio-K1-JZf" customClass="CharacterSelectView" customModule="Roguelike" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xio-K1-JZf">
                                         <rect key="frame" x="140" y="69" width="320" height="111"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="knight" translatesAutoresizingMaskIntoConstraints="NO" id="Uua-wF-IQ0">
@@ -168,13 +168,8 @@ weather any blow</string>
                                             <constraint firstAttribute="width" constant="320" id="oeq-Sg-FVf"/>
                                             <constraint firstAttribute="height" constant="111" id="rRK-Wt-3ON"/>
                                         </constraints>
-                                        <connections>
-                                            <outlet property="characterIV" destination="Uua-wF-IQ0" id="ufG-Cn-1NB"/>
-                                            <outlet property="classLbl" destination="i0f-9U-9k1" id="dle-9g-1Tc"/>
-                                            <outlet property="descriptionLbl" destination="izj-56-Ezg" id="bq0-Qm-uwY"/>
-                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emC-q7-9yb" customClass="CharacterSelectView" customModule="Roguelike" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emC-q7-9yb">
                                         <rect key="frame" x="140" y="188" width="320" height="111"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deadly" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73Y-7l-UAE">
@@ -206,13 +201,8 @@ fight to the enemy</string>
                                             <constraint firstAttribute="height" constant="111" id="0s6-ZD-Tm8"/>
                                             <constraint firstAttribute="width" constant="320" id="O6X-0D-Upb"/>
                                         </constraints>
-                                        <connections>
-                                            <outlet property="characterIV" destination="uTj-um-eiq" id="jbK-Wy-p60"/>
-                                            <outlet property="classLbl" destination="73Y-7l-UAE" id="Lpy-De-HWa"/>
-                                            <outlet property="descriptionLbl" destination="laV-gS-awi" id="Mte-to-y6e"/>
-                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDl-ZJ-8fV" customClass="CharacterSelectView" customModule="Roguelike" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDl-ZJ-8fV">
                                         <rect key="frame" x="140" y="307" width="320" height="111"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cleric" translatesAutoresizingMaskIntoConstraints="NO" id="9kw-Re-ynf">
@@ -244,13 +234,8 @@ their battles wisely</string>
                                             <constraint firstAttribute="height" constant="111" id="vNu-dE-dSP"/>
                                             <constraint firstAttribute="width" constant="320" id="yPX-Hs-4f3"/>
                                         </constraints>
-                                        <connections>
-                                            <outlet property="characterIV" destination="9kw-Re-ynf" id="hxB-vm-Xk1"/>
-                                            <outlet property="classLbl" destination="xr5-gH-J0g" id="2o9-12-GBn"/>
-                                            <outlet property="descriptionLbl" destination="zlA-9Q-NxA" id="PK1-ye-sSo"/>
-                                        </connections>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMb-5o-HDS" customClass="CharacterSelectView" customModule="Roguelike" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMb-5o-HDS">
                                         <rect key="frame" x="140" y="426" width="320" height="111"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mad" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzQ-BH-XHL">
@@ -282,11 +267,6 @@ what secrets has he seen?</string>
                                             <constraint firstAttribute="width" constant="320" id="QwV-G6-aSx"/>
                                             <constraint firstAttribute="height" constant="111" id="XYj-wm-qN0"/>
                                         </constraints>
-                                        <connections>
-                                            <outlet property="characterIV" destination="YTh-VE-cT9" id="cf7-u2-xMJ"/>
-                                            <outlet property="classLbl" destination="LzQ-BH-XHL" id="G3h-Wg-JmW"/>
-                                            <outlet property="descriptionLbl" destination="NN7-im-bd4" id="Oe7-eS-4gF"/>
-                                        </connections>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -353,10 +333,19 @@ what secrets has he seen?</string>
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7f-bZ-FHJ">
+                                <rect key="frame" x="258" y="285" width="84" height="30"/>
+                                <state key="normal" title="Start Puzzle"/>
+                                <connections>
+                                    <action selector="puzzlePressed:" destination="1NE-hf-4mh" eventType="touchUpInside" id="0Ok-qd-Pp8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="oKA-W5-JlL" secondAttribute="trailing" id="2JJ-8p-AfV"/>
+                            <constraint firstItem="Q7f-bZ-FHJ" firstAttribute="centerX" secondItem="QOw-3c-rGx" secondAttribute="centerX" id="BFP-mf-ZzP"/>
+                            <constraint firstItem="Q7f-bZ-FHJ" firstAttribute="centerY" secondItem="QOw-3c-rGx" secondAttribute="centerY" id="Hhi-yx-Zkm"/>
                             <constraint firstItem="vfm-ZC-9uW" firstAttribute="top" secondItem="oKA-W5-JlL" secondAttribute="bottom" id="TeK-KD-TZw"/>
                             <constraint firstItem="oKA-W5-JlL" firstAttribute="leading" secondItem="QOw-3c-rGx" secondAttribute="leading" id="VhD-wQ-O2n"/>
                             <constraint firstItem="oKA-W5-JlL" firstAttribute="top" secondItem="QOw-3c-rGx" secondAttribute="top" id="w7j-93-U7T"/>
@@ -364,6 +353,7 @@ what secrets has he seen?</string>
                     </view>
                     <connections>
                         <outlet property="maskView" destination="oKA-W5-JlL" id="Sma-6U-NAn"/>
+                        <outlet property="puzzleBtn" destination="Q7f-bZ-FHJ" id="COl-OW-BUW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pJ-1k-DVG" userLabel="First Responder" sceneMemberID="firstResponder"/>

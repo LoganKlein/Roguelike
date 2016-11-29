@@ -10,6 +10,8 @@ import UIKit
 
 class PortalViewController: GameViewController {
     
+    @IBOutlet var puzzleBtn: UIButton!
+    
     //MARK: - View Lifecycle
     
     override func viewDidLoad() {
@@ -43,7 +45,10 @@ class PortalViewController: GameViewController {
         }
         
         displayMap()
+        self.view.bringSubviewToFront(puzzleBtn)
     }
+    
+    //MARK: - Dialogue Example
     
     func startDialogue() {
         let dialogue1 = DialogueInfo(left: "hunter", right: nil, text: "The protagonist says: Hey dude, where am I?")
@@ -53,10 +58,16 @@ class PortalViewController: GameViewController {
         DialogueView.generateInView(self, dialogue: chain)
     }
     
+    //MARK: - Puzzle Example
+    
+    func startPuzzle() {
+        PuzzleView.generateInView(self)
+    }
+    
     //MARK: - IBActions
     
-    @IBAction func talkPressed(sender: UIButton) {
-        startDialogue()
+    @IBAction func puzzlePressed(sender: UIButton) {
+        startPuzzle()
     }
 }
 
