@@ -35,25 +35,25 @@ class GameViewController: UIViewController {
         game = GameObject()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if HUD == nil {
             HUD = HUDView.GenerateHUDView()
-            HUD.frame = CGRectMake(0, self.view.frame.size.height - HUD.frame.size.height, self.view.frame.size.width, HUD.frame.size.height)
+            HUD.frame = CGRect(x: 0, y: self.view.frame.size.height - HUD.frame.size.height, width: self.view.frame.size.width, height: HUD.frame.size.height)
             self.view.addSubview(HUD)
         }
         
         if itemHUD == nil {
             itemHUD = ItemHUDView.GenerateItemHUDView()
-            itemHUD.frame = CGRectMake(0, 0, self.view.frame.size.width, itemHUD.frame.size.height)
+            itemHUD.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: itemHUD.frame.size.height)
             self.view.addSubview(itemHUD)
         }
         
-        self.view.bringSubviewToFront(maskView)
+        self.view.bringSubview(toFront: maskView)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         if HUD != nil {
@@ -72,10 +72,10 @@ class GameViewController: UIViewController {
         downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(PortalViewController.downSwipe(_:)))
         longPress = UILongPressGestureRecognizer(target: self, action: #selector(PortalViewController.longPress(_:)))
         
-        leftSwipe.direction = .Left
-        rightSwipe.direction = .Right
-        upSwipe.direction = .Up
-        downSwipe.direction = .Down
+        leftSwipe.direction = .left
+        rightSwipe.direction = .right
+        upSwipe.direction = .up
+        downSwipe.direction = .down
         longPress.minimumPressDuration = 0.5
         
         self.view.addGestureRecognizer(leftSwipe)
@@ -85,36 +85,36 @@ class GameViewController: UIViewController {
         self.view.addGestureRecognizer(longPress)
     }
     
-    func changeSwipeEnabled(enabled: Bool) {
-        leftSwipe.enabled = enabled
-        rightSwipe.enabled = enabled
-        upSwipe.enabled = enabled
-        downSwipe.enabled = enabled
-        longPress.enabled = enabled
+    func changeSwipeEnabled(_ enabled: Bool) {
+        leftSwipe.isEnabled = enabled
+        rightSwipe.isEnabled = enabled
+        upSwipe.isEnabled = enabled
+        downSwipe.isEnabled = enabled
+        longPress.isEnabled = enabled
     }
     
-    func leftSwipe(recognizer: UISwipeGestureRecognizer) {
-        let newLocation = CGPointMake(game.player.coordinates.x - 1, game.player.coordinates.y)
+    func leftSwipe(_ recognizer: UISwipeGestureRecognizer) {
+        let newLocation = CGPoint(x: game.player.coordinates.x - 1, y: game.player.coordinates.y)
         attemptToMovePlayerTo(newLocation, xMult: game.map.cellSize, yMult: 0)
     }
     
-    func rightSwipe(recognizer: UISwipeGestureRecognizer) {
-        let newLocation = CGPointMake(game.player.coordinates.x + 1, game.player.coordinates.y)
+    func rightSwipe(_ recognizer: UISwipeGestureRecognizer) {
+        let newLocation = CGPoint(x: game.player.coordinates.x + 1, y: game.player.coordinates.y)
         attemptToMovePlayerTo(newLocation, xMult: game.map.cellSize * -1, yMult: 0)
     }
     
-    func upSwipe(recognizer: UISwipeGestureRecognizer) {
-        let newLocation = CGPointMake(game.player.coordinates.x, game.player.coordinates.y - 1)
+    func upSwipe(_ recognizer: UISwipeGestureRecognizer) {
+        let newLocation = CGPoint(x: game.player.coordinates.x, y: game.player.coordinates.y - 1)
         attemptToMovePlayerTo(newLocation, xMult: 0, yMult: game.map.cellSize)
     }
     
-    func downSwipe(recognizer: UISwipeGestureRecognizer) {
-        let newLocation = CGPointMake(game.player.coordinates.x, game.player.coordinates.y + 1)
+    func downSwipe(_ recognizer: UISwipeGestureRecognizer) {
+        let newLocation = CGPoint(x: game.player.coordinates.x, y: game.player.coordinates.y + 1)
         attemptToMovePlayerTo(newLocation, xMult: 0, yMult: game.map.cellSize * -1)
     }
     
-    func longPress(recognizer: UILongPressGestureRecognizer) {
-        if (recognizer.state == .Began) {
+    func longPress(_ recognizer: UILongPressGestureRecognizer) {
+        if (recognizer.state == .began) {
             moveEnemies()
         }
     }
@@ -133,18 +133,18 @@ class GameViewController: UIViewController {
         
         let width = game.map.gridSize.width * game.map.cellSize
         let height = game.map.gridSize.height * game.map.cellSize
-        mapView = UIView(frame: CGRectMake(0, 0, width, height))
+        mapView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height))
         mapView.center = self.view.center
         mapView.tag = 20
         mapView.alpha = 0
         self.view.addSubview(mapView)
         
-        for (indexY, row) in game.map.cellmap.enumerate(){
-            for (indexX, isWall) in row.enumerate(){
+        for (indexY, row) in game.map.cellmap.enumerated(){
+            for (indexX, isWall) in row.enumerated(){
                 if isWall {
                     let xPos = game.map.cellSize * CGFloat(indexX)
                     let yPos = game.map.cellSize * CGFloat(indexY)
-                    let wall = UIImageView(frame: CGRectMake(xPos, yPos, game.map.cellSize, game.map.cellSize))
+                    let wall = UIImageView(frame: CGRect(x: xPos, y: yPos, width: game.map.cellSize, height: game.map.cellSize))
                     wall.image = UIImage(named: "tile1_0")
                     mapView.addSubview(wall)
                 }
@@ -166,63 +166,63 @@ class GameViewController: UIViewController {
         centerOnSpawn()
         
         if HUD != nil {
-            self.view.bringSubviewToFront(HUD)
+            self.view.bringSubview(toFront: HUD)
             HUD.updateHUD(self.game, speed: self.game.animSpeed)
         }
         
         if itemHUD != nil {
-            self.view.bringSubviewToFront(itemHUD)
+            self.view.bringSubview(toFront: itemHUD)
         }
         
-        self.view.bringSubviewToFront(self.maskView)
+        self.view.bringSubview(toFront: self.maskView)
     }
     
-    func fadeBlack(val: CGFloat) {
-        UIView.animateWithDuration(fadeSpeed) {
+    func fadeBlack(_ val: CGFloat) {
+        UIView.animate(withDuration: fadeSpeed, animations: {
             self.maskView.alpha = val
             self.mapView.alpha = 1
-        }
+        }) 
     }
     
     func centerOnSpawn() {
         let x = game.map.spawnCoordinates.x * game.map.cellSize * -1 + self.view.frame.size.width/2 - game.map.cellSize/2
         let y = game.map.spawnCoordinates.y * game.map.cellSize * -1 + self.view.frame.size.height/2 - game.map.cellSize/2
-        mapView.frame = CGRectMake(x, y, mapView.frame.size.width, mapView.frame.size.height)
+        mapView.frame = CGRect(x: x, y: y, width: mapView.frame.size.width, height: mapView.frame.size.height)
     }
     
     //MARK: - Placement Methods
     
-    func placeEnemy(view: UIView, coordinates: CGPoint) {
+    func placeEnemy(_ view: UIView, coordinates: CGPoint) {
         let xPos = game.map.cellSize * coordinates.x + game.map.cellSize/2
         let yPos = game.map.cellSize * coordinates.y + game.map.cellSize/2
         let enemy = EnemyObject.getRandomEnemy(game)
         enemy.coordinates = coordinates
-        enemy.displayView.center = CGPointMake(xPos, yPos)
+        enemy.displayView.center = CGPoint(x: xPos, y: yPos)
         game.enemies.append(enemy)
         view.addSubview(enemy.displayView)
     }
     
-    func placeTreasure(view: UIView, coordinates: CGPoint) {
+    func placeTreasure(_ view: UIView, coordinates: CGPoint) {
         let xPos = game.map.cellSize * coordinates.x
         let yPos = game.map.cellSize * coordinates.y
-        let treasure = UIImageView(frame: CGRectMake(xPos, yPos, game.map.cellSize, game.map.cellSize))
+        let treasure = UIImageView(frame: CGRect(x: xPos, y: yPos, width: game.map.cellSize, height: game.map.cellSize))
         treasure.image = UIImage(named: "treasure")
         view.addSubview(treasure)
         treasureViews.append(treasure)
     }
     
-    func placeStairs(view: UIView, coordinates: CGPoint) {
+    func placeStairs(_ view: UIView, coordinates: CGPoint) {
         let xPos = game.map.cellSize * coordinates.x
         let yPos = game.map.cellSize * coordinates.y
-        let stairs = UIImageView(frame: CGRectMake(xPos, yPos, game.map.cellSize, game.map.cellSize))
+        let stairs = UIImageView(frame: CGRect(x: xPos, y: yPos, width: game.map.cellSize, height: game.map.cellSize))
         stairs.image = UIImage(named: "stairs")
         view.addSubview(stairs)
     }
     
-    func placeSpawn(view: UIView, coordinates: CGPoint) {
+    func placeSpawn(_ view: UIView, coordinates: CGPoint) {
         let xPos = game.map.cellSize * coordinates.x
         let yPos = game.map.cellSize * coordinates.y
-        let spawn = UIView(frame: CGRectMake(xPos, yPos, game.map.cellSize, game.map.cellSize))
+        let spawn = UIView(frame: CGRect(x: xPos, y: yPos, width: game.map.cellSize, height: game.map.cellSize))
         view.addSubview(spawn)
     }
     
@@ -238,7 +238,7 @@ class GameViewController: UIViewController {
     
     //MARK: - Collision Detection Methods
     
-    func attemptToMovePlayerTo(newLocation: CGPoint, xMult: CGFloat, yMult: CGFloat) {
+    func attemptToMovePlayerTo(_ newLocation: CGPoint, xMult: CGFloat, yMult: CGFloat) {
         let spaceValidity = CollisionHelper().spaceIsValid(game, location: newLocation)
         if spaceValidity < 1 {
             //Stairs?
@@ -251,8 +251,8 @@ class GameViewController: UIViewController {
             }
             
             game.player.coordinates = newLocation
-            UIView.animateWithDuration(game.animSpeed, animations: {
-                self.mapView.center = CGPointMake(self.mapView.center.x + xMult, self.mapView.center.y + yMult)
+            UIView.animate(withDuration: game.animSpeed, animations: {
+                self.mapView.center = CGPoint(x: self.mapView.center.x + xMult, y: self.mapView.center.y + yMult)
             })
         }
             
@@ -282,18 +282,18 @@ class GameViewController: UIViewController {
             
             //Animate the bump
             let oldCenter = game.player.displayView.center
-            UIView.animateWithDuration(game.animSpeed/2, animations: {
-                self.game.player.displayView.center = CGPointMake(self.game.player.displayView.center.x - xMult/2, self.game.player.displayView.center.y - yMult/2)
+            UIView.animate(withDuration: game.animSpeed/2, animations: {
+                self.game.player.displayView.center = CGPoint(x: self.game.player.displayView.center.x - xMult/2, y: self.game.player.displayView.center.y - yMult/2)
                 }, completion: { (Bool) in
-                    UIView.animateWithDuration(self.game.animSpeed/2, animations: {
+                    UIView.animate(withDuration: self.game.animSpeed/2, animations: {
                         self.game.player.displayView.center = oldCenter
                     })
             })
         }
         
         if spaceValidity != 1 {
-            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(game.animSpeed * Double(NSEC_PER_SEC)))
-            dispatch_after(delayTime, dispatch_get_main_queue()) {
+            let delayTime = DispatchTime.now() + Double(Int64(game.animSpeed * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+            DispatchQueue.main.asyncAfter(deadline: delayTime) {
                 self.game.player.checkItems()
                 self.moveEnemies()
                 self.itemHUD.updateHUD(self.game.player)
@@ -309,45 +309,45 @@ class GameViewController: UIViewController {
             enemy.determineDirection(game)
         }
         
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(game.animSpeed/2 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
+        let delayTime = DispatchTime.now() + Double(Int64(game.animSpeed/2 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: delayTime) {
             self.changeSwipeEnabled(true)
             self.HUD.updateHUD(self.game, speed: self.game.animSpeed)
         }
     }
     
-    func treasureTouched(item: ItemObject!, index: Int) {
+    func treasureTouched(_ item: ItemObject!, index: Int) {
         var message = "The chest before you contains an item:\n\(item.name)"
         
-        if item.type == .Weapon && game.player.weapon != nil { message = message.stringByAppendingString("\n\nThis will replace your current weapon") }
-        if item.type == .Armor && game.player.armor != nil { message = message.stringByAppendingString("\n\nThis will replace your current armor") }
-        if item.type == .Buff && game.player.buff != nil { message = message.stringByAppendingString("\n\nThis will replace your current buff") }
+        if item.type == .weapon && game.player.weapon != nil { message = message + "\n\nThis will replace your current weapon" }
+        if item.type == .armor && game.player.armor != nil { message = message + "\n\nThis will replace your current armor" }
+        if item.type == .buff && game.player.buff != nil { message = message + "\n\nThis will replace your current buff" }
         
-        let alert = UIAlertController(title: message, message: "Will you take the \(item.name)?", preferredStyle: .Alert)
-        let stepAction = UIAlertAction(title: "Take Item", style: .Default, handler: { (UIAlertAction) in
+        let alert = UIAlertController(title: message, message: "Will you take the \(item.name)?", preferredStyle: .alert)
+        let stepAction = UIAlertAction(title: "Take Item", style: .default, handler: { (UIAlertAction) in
             self.game.player.equipItem(item!)
             self.itemHUD.updateHUD(self.game.player)
             self.HUD.updateHUD(self.game, speed: self.game.animSpeed)
-            self.game.map.treasureCoordinates.removeAtIndex(index)
-            self.game.map.treasures.removeAtIndex(index)
+            self.game.map.treasureCoordinates.remove(at: index)
+            self.game.map.treasures.remove(at: index)
             
             let treasureView = self.treasureViews[index]
             
-            dispatch_async(dispatch_get_main_queue(),{
-                UIView.animateWithDuration(self.game.animSpeed, animations: {
+            DispatchQueue.main.async(execute: {
+                UIView.animate(withDuration: self.game.animSpeed, animations: {
                     treasureView.alpha = 0
                     }, completion: { (Bool) in
                         treasureView.removeFromSuperview()
-                        self.treasureViews.removeAtIndex(index)
+                        self.treasureViews.remove(at: index)
                 })
             })
         })
         
-        let stayAction = UIAlertAction(title: "Leave Item", style: .Destructive, handler: nil)
+        let stayAction = UIAlertAction(title: "Leave Item", style: .destructive, handler: nil)
         
         alert.addAction(stayAction)
         alert.addAction(stepAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 

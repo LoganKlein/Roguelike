@@ -22,15 +22,17 @@ class MenuViewController: UIViewController {
     
     //MARK: - IBActions
     
-    @IBAction func newGamePressed(sender: UIButton) {
-        self.performSegueWithIdentifier("pushCharacterSelect", sender: nil)
+    @IBAction func newGamePressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "pushCharacterSelect", sender: nil)
     }
     
-    @IBAction func continuePressed(sender: UIButton) {
+    @IBAction func continuePressed(_ sender: UIButton) {
         print("continue pressed")
+        let url = URL(string: "gtybible://bible/01004001")
+        UIApplication.shared.openURL(url!)
     }
     
-    @IBAction func optionsPressed(sender: UIButton) {
+    @IBAction func optionsPressed(_ sender: UIButton) {
         print("options pressed")
     }
 }

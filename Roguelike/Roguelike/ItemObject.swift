@@ -9,10 +9,10 @@
 import UIKit
 
 enum ItemType: Int {
-    case Consumable = 0
-    case Armor
-    case Weapon
-    case Buff
+    case consumable = 0
+    case armor
+    case weapon
+    case buff
 }
 
 class ItemObject: NSObject {
@@ -41,7 +41,7 @@ class ItemObject: NSObject {
     
     //MARK: - Retrieval Methods
     
-    class func itemFromInfo(dict: NSDictionary) -> ItemObject {
+    class func itemFromInfo(_ dict: NSDictionary) -> ItemObject {
         let item = ItemObject()
         item.name = dict["name"] as! String
         item.imageName = dict["image"] as! String
@@ -58,7 +58,7 @@ class ItemObject: NSObject {
         return item
     }
     
-    class func getItemSet(name: String) -> [ItemObject] {
+    class func getItemSet(_ name: String) -> [ItemObject] {
         let json: [NSDictionary] = JSONHelper.getArrayFromFile(name)
         var itemArray: [ItemObject] = []
         

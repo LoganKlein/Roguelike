@@ -21,18 +21,18 @@ class CAMap: GameMap {
     
     //MARK: - Initialization Methods
     
-    func createMap(size: CGSize, floor: Int) -> CAMap? {
+    func createMap(_ size: CGSize, floor: Int) -> CAMap? {
         self.gridSize = size
         print("New Map!")
-        var startTime = NSDate()
+        var startTime = Date()
         generateMap(floor)
-        print("map generated \t(took: \(NSDate().timeIntervalSinceDate(startTime)))")
-        startTime = NSDate()
+        print("map generated \t(took: \(Date().timeIntervalSince(startTime)))")
+        startTime = Date()
         
-        checkedMap = Array(count:Int(gridSize.height), repeatedValue: Array(count:Int(gridSize.width), repeatedValue:false))
+        checkedMap = Array(repeating: Array(repeating: false, count: Int(gridSize.width)), count: Int(gridSize.height))
         floodFill(Int(spawnCoordinates.x), y: Int(spawnCoordinates.y))
-        print("map filled \t\t(took: \(NSDate().timeIntervalSinceDate(startTime)))")
-        startTime = NSDate()
+        print("map filled \t\t(took: \(Date().timeIntervalSince(startTime)))")
+        startTime = Date()
         
         if !canVisitAllImportantCoordinates() {
             print("map discarded :(")
@@ -40,12 +40,12 @@ class CAMap: GameMap {
             return nil
         }
         
-        print("map checked \t(took: \(NSDate().timeIntervalSinceDate(startTime)))")
+        print("map checked \t(took: \(Date().timeIntervalSince(startTime)))")
         return self
     }
     
-    func generateMap(floor: Int) {
-        cellmap = Array(count:Int(gridSize.height), repeatedValue: Array(count:Int(gridSize.width), repeatedValue:false))
+    func generateMap(_ floor: Int) {
+        cellmap = Array(repeating: Array(repeating: false, count: Int(gridSize.width)), count: Int(gridSize.height))
         cellmap = initializeMap(Int(gridSize.width), yIndex:Int(gridSize.height))
         
         for _ in 0...generations {
@@ -59,8 +59,8 @@ class CAMap: GameMap {
         findUniqueLocations(treasureCount, enemies: enemyCount)
     }
     
-    func initializeMap(xIndex:Int, yIndex:Int) -> [[Bool]]{
-        var map:[[Bool]] = Array(count:yIndex, repeatedValue: Array(count:xIndex, repeatedValue:false))
+    func initializeMap(_ xIndex:Int, yIndex:Int) -> [[Bool]]{
+        var map:[[Bool]] = Array(repeating: Array(repeating: false, count: xIndex), count: yIndex)
         
         for y in 0...(yIndex - 1) {
             for x in 0...(xIndex - 1) {
@@ -75,7 +75,7 @@ class CAMap: GameMap {
     }
     
     func nextGeneration() {
-        var newMap:[[Bool]] = Array(count:Int(gridSize.height), repeatedValue: Array(count:Int(gridSize.width), repeatedValue:false))
+        var newMap:[[Bool]] = Array(repeating: Array(repeating: false, count: Int(gridSize.width)), count: Int(gridSize.height))
         
         for y in 0...(cellmap.count - 1) {
             for x in 0...(cellmap[0].count - 1) {
@@ -103,8 +103,8 @@ class CAMap: GameMap {
     
     //MARK: - Quality Checking Methods
     
-    func floodFill(x: Int, y: Int) {
-        let currentLocation = CGPointMake(CGFloat(x), CGFloat(y))
+    func floodFill(_ x: Int, y: Int) {
+        let currentLocation = CGPoint(x: CGFloat(x), y: CGFloat(y))
         
         if (x < 0 || x > Int(gridSize.width) || y < 0 || y > Int(gridSize.height)) { return }
         if cellmap[y][x] { return }

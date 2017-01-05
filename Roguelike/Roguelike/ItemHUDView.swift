@@ -19,22 +19,22 @@ class ItemHUDView: UIView {
     @IBOutlet var buffIV: UIImageView!
     
     class func GenerateItemHUDView() -> ItemHUDView {
-        let xib = NSBundle.mainBundle().loadNibNamed("ItemHUDView", owner: self, options: nil)
-        let hud = xib[0] as! ItemHUDView
+        let xib = Bundle.main.loadNibNamed("ItemHUDView", owner: self, options: nil)
+        let hud = xib?[0] as! ItemHUDView
         let radius:CGFloat = 10.0
         hud.weaponView.layer.cornerRadius = radius
         hud.armorView.layer.cornerRadius = radius
         hud.buffView.layer.cornerRadius = radius
-        hud.weaponView.layer.borderColor = UIColor.whiteColor().CGColor
-        hud.armorView.layer.borderColor = UIColor.whiteColor().CGColor
-        hud.buffView.layer.borderColor = UIColor.whiteColor().CGColor
+        hud.weaponView.layer.borderColor = UIColor.white.cgColor
+        hud.armorView.layer.borderColor = UIColor.white.cgColor
+        hud.buffView.layer.borderColor = UIColor.white.cgColor
         hud.weaponView.layer.borderWidth = 1
         hud.armorView.layer.borderWidth = 1
         hud.buffView.layer.borderWidth = 1
         return hud
     }
     
-    func updateHUD(player: PlayerObject) {
+    func updateHUD(_ player: PlayerObject) {
         if player.weapon != nil { weaponIV.image = UIImage(named: (player.weapon?.imageName)!) }
         else { weaponIV.image = nil }
         

@@ -23,9 +23,9 @@ class DialogueView: UIView {
     
     //MARK: - Display Methods
     
-    class func generateInView(gameView: GameViewController, dialogue: [DialogueInfo]) {
-        let xib = NSBundle.mainBundle().loadNibNamed("DialogueView", owner: self, options: nil)
-        let dialogueView = xib[0] as! DialogueView
+    class func generateInView(_ gameView: GameViewController, dialogue: [DialogueInfo]) {
+        let xib = Bundle.main.loadNibNamed("DialogueView", owner: self, options: nil)
+        let dialogueView = xib?[0] as! DialogueView
         dialogueView.gameVC = gameView
         dialogueView.dialogueChain = dialogue
         dialogueView.setupGestureRecognizers()
@@ -36,7 +36,7 @@ class DialogueView: UIView {
         gameView.changeSwipeEnabled(false)
     }
     
-    func showDialogueInfo(info: DialogueInfo) {
+    func showDialogueInfo(_ info: DialogueInfo) {
         let animation: CATransition = CATransition()
         animation.duration = 0.35
         animation.type = kCATransitionMoveIn
@@ -47,13 +47,13 @@ class DialogueView: UIView {
             leftIV.image = UIImage(named: info.leftIVName!)
             leftIV.sizeToFit()
             
-            UIView.animateWithDuration(0.35, animations: {
+            UIView.animate(withDuration: 0.35, animations: {
                 self.leftIV.alpha = 1
             })
         }
             
         else {
-            UIView.animateWithDuration(0.35, animations: {
+            UIView.animate(withDuration: 0.35, animations: {
                 self.leftIV.alpha = 0
             })
         }
@@ -63,36 +63,36 @@ class DialogueView: UIView {
             rightIV.image = UIImage(named: info.rightIVName!)
             rightIV.sizeToFit()
             
-            UIView.animateWithDuration(0.35, animations: { 
+            UIView.animate(withDuration: 0.35, animations: { 
                 self.rightIV.alpha = 1
             })
         }
         
         else {
-            UIView.animateWithDuration(0.35, animations: {
+            UIView.animate(withDuration: 0.35, animations: {
                 self.rightIV.alpha = 0
             })
         }
         
         let font = UIFont(name: "Futura", size: 21.0)
-        let attributes: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: font!]
-        mainTextView.layer.addAnimation(animation, forKey: "changeTextTransition")
+        let attributes: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: font!]
+        mainTextView.layer.add(animation, forKey: "changeTextTransition")
         let attText = NSAttributedString(string: info.displayText!, attributes: attributes)
         mainTextView.attributedText = attText
     }
     
     func showDialogueView() {
         showDialogueInfo(dialogueChain[0])
-        UIView.animateWithDuration(0.35) { 
+        UIView.animate(withDuration: 0.35, animations: { 
             self.alpha = 1
-        }
+        }) 
     }
     
     func dismissDialogueView() {
         gameVC.changeSwipeEnabled(true)
-        UIView.animateWithDuration(0.35) {
+        UIView.animate(withDuration: 0.35, animations: {
             self.alpha = 0
-        }
+        }) 
     }
     
     func advanceDialogue() {
@@ -109,11 +109,11 @@ class DialogueView: UIView {
 
     //MARK: - Gesture Recognition Methods
     
-    func leftSwipe(recognizer: UISwipeGestureRecognizer) {
+    func leftSwipe(_ recognizer: UISwipeGestureRecognizer) {
         advanceDialogue()
     }
     
-    func rightSwipe(recognizer: UISwipeGestureRecognizer) {
+    func rightSwipe(_ recognizer: UISwipeGestureRecognizer) {
         currentDialogue -= 1
         
         if currentDialogue >= 0 {
@@ -125,11 +125,11 @@ class DialogueView: UIView {
         }
     }
     
-    func tap(recognizer: UITapGestureRecognizer) {
+    func tap(_ recognizer: UITapGestureRecognizer) {
         advanceDialogue()
     }
     
-    func longPress(recognizer: UITapGestureRecognizer) {
+    func longPress(_ recognizer: UITapGestureRecognizer) {
         dismissDialogueView()
     }
     
@@ -139,8 +139,8 @@ class DialogueView: UIView {
         let tap = UITapGestureRecognizer(target: self, action: #selector(DialogueView.tap(_:)))
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(DialogueView.longPress(_:)))
         
-        leftSwipe.direction = .Left
-        rightSwipe.direction = .Right
+        leftSwipe.direction = .left
+        rightSwipe.direction = .right
         longPress.minimumPressDuration = 0.5
         
         self.addGestureRecognizer(leftSwipe)

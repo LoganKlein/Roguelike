@@ -9,7 +9,7 @@
 import UIKit
 
 class CollisionHelper: NSObject {
-    func spaceIsValid(game:GameObject, location: CGPoint) -> Int {
+    func spaceIsValid(_ game:GameObject, location: CGPoint) -> Int {
         let x = Int(location.x)
         let y = Int(location.y)
         
@@ -33,7 +33,7 @@ class CollisionHelper: NSObject {
         return 0
     }
     
-    func enemyAtLocation(game: GameObject, location: CGPoint) -> EnemyObject? {
+    func enemyAtLocation(_ game: GameObject, location: CGPoint) -> EnemyObject? {
         for enemy in game.enemies {
             if enemy.coordinates == location {
                 return enemy
@@ -43,10 +43,10 @@ class CollisionHelper: NSObject {
         return nil
     }
     
-    func treasureAtLocation(game: GameObject, location: CGPoint) -> (item: ItemObject?, index: Int) {
+    func treasureAtLocation(_ game: GameObject, location: CGPoint) -> (item: ItemObject?, index: Int) {
         for treasureLocation in game.map.treasureCoordinates {
             if treasureLocation == location {
-                let index = game.map.treasureCoordinates.indexOf(treasureLocation)
+                let index = game.map.treasureCoordinates.index(of: treasureLocation)
                 let treasure = game.map.treasures[index!]
                 return (treasure, index!)
             }

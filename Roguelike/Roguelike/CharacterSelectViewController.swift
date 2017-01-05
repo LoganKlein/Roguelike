@@ -26,52 +26,52 @@ class CharacterSelectViewController: UIViewController {
         let width: CGFloat = 3.0
         resilientBtn.layer.cornerRadius = radius
         resilientBtn.layer.borderWidth = width
-        resilientBtn.layer.borderColor = UIColor.clearColor().CGColor
+        resilientBtn.layer.borderColor = UIColor.clear.cgColor
         
         deadlyBtn.layer.cornerRadius = radius
         deadlyBtn.layer.borderWidth = width
-        deadlyBtn.layer.borderColor = UIColor.clearColor().CGColor
+        deadlyBtn.layer.borderColor = UIColor.clear.cgColor
         
         persistentBtn.layer.cornerRadius = radius
         persistentBtn.layer.borderWidth = width
-        persistentBtn.layer.borderColor = UIColor.clearColor().CGColor
+        persistentBtn.layer.borderColor = UIColor.clear.cgColor
         
         madBtn.layer.cornerRadius = radius
         madBtn.layer.borderWidth = width
-        madBtn.layer.borderColor = UIColor.clearColor().CGColor
+        madBtn.layer.borderColor = UIColor.clear.cgColor
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "pushPortal") {
-            (segue.destinationViewController as! PortalViewController).characterType = CharacterClass(rawValue: selectedType)
+            (segue.destination as! PortalViewController).characterType = CharacterClass(rawValue: selectedType)
         }
     }
     
     // MARK: - IBActions
     
-    @IBAction func classPressed(sender: UIButton) {
-        resilientBtn.layer.borderColor = UIColor.clearColor().CGColor
-        deadlyBtn.layer.borderColor = UIColor.clearColor().CGColor
-        persistentBtn.layer.borderColor = UIColor.clearColor().CGColor
-        madBtn.layer.borderColor = UIColor.clearColor().CGColor
+    @IBAction func classPressed(_ sender: UIButton) {
+        resilientBtn.layer.borderColor = UIColor.clear.cgColor
+        deadlyBtn.layer.borderColor = UIColor.clear.cgColor
+        persistentBtn.layer.borderColor = UIColor.clear.cgColor
+        madBtn.layer.borderColor = UIColor.clear.cgColor
         
-        sender.layer.borderColor = UIColor.whiteColor().CGColor
+        sender.layer.borderColor = UIColor.white.cgColor
         selectedType = sender.tag
         goBtn.alpha = 1
-        goBtn.enabled = true
+        goBtn.isEnabled = true
     }
     
-    @IBAction func goPressed(sender: UIButton) {
+    @IBAction func goPressed(_ sender: UIButton) {
         fadeToBlack()
     }
     
     //MARK: - Animation Methods
     
     func fadeToBlack() {
-        UIView.animateWithDuration(3.0, animations: {
+        UIView.animate(withDuration: 3.0, animations: {
             self.maskView.alpha = 1
-            }) { (Bool) in
-                self.performSegueWithIdentifier("pushPortal", sender: nil)
-        }
+            }, completion: { (Bool) in
+                self.performSegue(withIdentifier: "pushPortal", sender: nil)
+        }) 
     }
 }

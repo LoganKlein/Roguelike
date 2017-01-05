@@ -22,18 +22,18 @@ class CharacterObject: NSObject {
     
     //MARK: - Location Methods
     
-    func moveTo(newLocation: CGPoint, map: CAMap) {
-        UIView.animateWithDuration(0.2, animations: {
+    func moveTo(_ newLocation: CGPoint, map: CAMap) {
+        UIView.animate(withDuration: 0.2, animations: {
             let xPos = map.cellSize * newLocation.x + map.cellSize/2
             let yPos = map.cellSize * newLocation.y + map.cellSize/2
             self.coordinates = newLocation
-            self.displayView.center = CGPointMake(xPos, yPos)
+            self.displayView.center = CGPoint(x: xPos, y: yPos)
         })
     }
     
     //MARK: - Modification Methods
     
-    func takeDamage(dmg: Double) -> Bool {
+    func takeDamage(_ dmg: Double) -> Bool {
         let dmgTaken = max(dmg - def, 0)
         LabelHelper.showNumber(Int(dmgTaken * -1), view: self.displayView)
         

@@ -23,7 +23,7 @@ class PortalViewController: GameViewController {
         createMap()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         mapView.alpha = 1
@@ -37,7 +37,7 @@ class PortalViewController: GameViewController {
         if width > 150 { width = 150 }
         if height > 150 { height = 150 }
         
-        let size = CGSizeMake(CGFloat(width), CGFloat(height))
+        let size = CGSize(width: CGFloat(width), height: CGFloat(height))
         game.map = CAMap().createMap(size, floor: game.floor)
         
         while game.map == nil {
@@ -45,7 +45,7 @@ class PortalViewController: GameViewController {
         }
         
         displayMap()
-        self.view.bringSubviewToFront(puzzleBtn)
+        self.view.bringSubview(toFront: puzzleBtn)
     }
     
     //MARK: - Dialogue Example
@@ -66,30 +66,35 @@ class PortalViewController: GameViewController {
     
     //MARK: - IBActions
     
-    @IBAction func puzzlePressed(sender: UIButton) {
+    @IBAction func puzzlePressed(_ sender: UIButton) {
         startPuzzle()
     }
 }
 
 extension PortalViewController: GameViewControllerDelegate {
     func portalTouched() {
-        let alert = UIAlertController(title: "A glowing portal gapes before you...", message: "Step through?", preferredStyle: .Alert)
-        let stepAction = UIAlertAction(title: "Step Through", style: .Default, handler: { (UIAlertAction) in
+        let alert = UIAlertController(title: "A glowing portal gapes before you...", message: "Step through?", preferredStyle: .alert)
+        let stepAction = UIAlertAction(title: "Step Through", style: .default, handler: { (UIAlertAction) in
             self.game.floor += 1
             self.fadeBlack(1)
             
-            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(self.fadeSpeed * Double(NSEC_PER_SEC)))
-            dispatch_after(delayTime, dispatch_get_main_queue()) {
-                self.game.player.loseSanity(1.0)
-                self.createMap()
-                self.fadeBlack(0)
+            let delayTime = DispatchTime.now() + Double(Int64(self.fadeSpeed * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+            DispatchQueue.main.asyncAfter(deadline: delayTime) {
+                if self.game.player.loseSanity(1.0) {
+                    print("died")
+                }
+                
+                else {
+                    self.createMap()
+                    self.fadeBlack(0)
+                }
             }
         })
         
-        let stayAction = UIAlertAction(title: "Stay Here", style: .Destructive, handler: nil)
+        let stayAction = UIAlertAction(title: "Stay Here", style: .destructive, handler: nil)
         
         alert.addAction(stayAction)
         alert.addAction(stepAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
 }

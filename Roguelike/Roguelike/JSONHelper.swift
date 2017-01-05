@@ -9,13 +9,13 @@
 import UIKit
 
 class JSONHelper: NSObject {
-    class func getArrayFromFile(name: String) -> [NSDictionary] {
-        if let path = NSBundle.mainBundle().pathForResource(name, ofType: "json") {
+    class func getArrayFromFile(_ name: String) -> [NSDictionary] {
+        if let path = Bundle.main.path(forResource: name, ofType: "json") {
             do {
-                let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: .DataReadingMappedIfSafe)
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 
                 do {
-                    let json: [NSDictionary] = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as! [NSDictionary]
+                    let json: [NSDictionary] = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [NSDictionary]
                     return json
                 }
                     

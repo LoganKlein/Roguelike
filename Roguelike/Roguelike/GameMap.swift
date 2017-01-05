@@ -10,7 +10,7 @@ import UIKit
 
 class GameMap: NSObject {
     var cellmap:[[Bool]]!
-    var gridSize = CGSizeMake(20, 20)
+    var gridSize = CGSize(width: 20, height: 20)
     var cellSize: CGFloat = 50.0
     
     var treasures: [ItemObject] = []
@@ -21,7 +21,7 @@ class GameMap: NSObject {
     
     //Placement Methods
     
-    func countAliveNeighbours(x:Int, y:Int) -> Int{
+    func countAliveNeighbours(_ x:Int, y:Int) -> Int{
         var count = 0
         var neighbour_x = 0
         var neighbour_y = 0
@@ -46,7 +46,7 @@ class GameMap: NSObject {
         return count
     }
     
-    func findUniqueLocations(treasure: Int, enemies: Int) {
+    func findUniqueLocations(_ treasure: Int, enemies: Int) {
         let enemyHiddenLimit = 0
         let stairHiddenLimit = 3
         let treasureHiddenLimit = 4
@@ -58,7 +58,7 @@ class GameMap: NSObject {
             for x in 0...(cellmap[0].count - 1) {
                 if !cellmap[y][x] {
                     let nbs = countAliveNeighbours(x, y: y)
-                    let coord = CGPointMake(CGFloat(x), CGFloat(y))
+                    let coord = CGPoint(x: CGFloat(x), y: CGFloat(y))
                     
                     if nbs >= treasureHiddenLimit {
                         possibleTreasureLocations.append(coord)

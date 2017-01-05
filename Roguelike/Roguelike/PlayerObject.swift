@@ -9,10 +9,10 @@
 import UIKit
 
 enum CharacterClass: Int {
-    case Resilient = 0
-    case Deadly
-    case Persistent
-    case Mad
+    case resilient = 0
+    case deadly
+    case persistent
+    case mad
 }
 
 class PlayerObject: CharacterObject {
@@ -29,9 +29,9 @@ class PlayerObject: CharacterObject {
     
     //MARK: - Initialization Methods
     
-    class func initHero(map: CAMap, type: CharacterClass) -> PlayerObject {
+    class func initHero(_ map: CAMap, type: CharacterClass) -> PlayerObject {
         let hero = PlayerObject()
-        hero.displayView = UIView(frame: CGRectMake(0, 0, map.cellSize, map.cellSize))
+        hero.displayView = UIView(frame: CGRect(x: 0, y: 0, width: map.cellSize, height: map.cellSize))
         hero.characterIV = UIImageView(frame: hero.displayView.frame)
         hero.displayView.addSubview(hero.characterIV)
         
@@ -41,25 +41,25 @@ class PlayerObject: CharacterObject {
         hero.type = type
         
         //Finish starting stats
-        if type == .Resilient {
+        if type == .resilient {
             hero.characterIV.image = UIImage(named: "knight")
             hero.def += 2.0
             hero.maxHP += 5.0
             hero.curHP = hero.maxHP
         }
         
-        else if type == .Deadly {
+        else if type == .deadly {
             hero.characterIV.image = UIImage(named: "hunter")
             hero.atk += 2.0
             hero.lck += 3.0
         }
         
-        else if type == .Persistent {
+        else if type == .persistent {
             hero.characterIV.image = UIImage(named: "cleric")
             hero.reg += 0.2
         }
         
-        else if type == .Mad {
+        else if type == .mad {
             hero.characterIV.image = UIImage(named: "prophet")
             hero.sty = 50.0
         }
@@ -90,10 +90,10 @@ class PlayerObject: CharacterObject {
         }
     }
     
-    func removeItem(item: ItemObject) {
-        if item.type == .Weapon { weapon = nil }
-        if item.type == .Armor { armor = nil }
-        if item.type == .Buff { buff = nil }
+    func removeItem(_ item: ItemObject) {
+        if item.type == .weapon { weapon = nil }
+        if item.type == .armor { armor = nil }
+        if item.type == .buff { buff = nil }
         
         self.atk -= item.atkBns
         self.def -= item.defBns
@@ -106,8 +106,8 @@ class PlayerObject: CharacterObject {
         if curHP > maxHP { curHP = maxHP }
     }
     
-    func checkEquipment(item: ItemObject) {
-        if item.type == .Weapon {
+    func checkEquipment(_ item: ItemObject) {
+        if item.type == .weapon {
             if weapon != nil {
                 removeItem(weapon!)
             }
@@ -115,7 +115,7 @@ class PlayerObject: CharacterObject {
             weapon = item
         }
         
-        if item.type == .Armor {
+        if item.type == .armor {
             if armor != nil {
                 removeItem(armor!)
             }
@@ -123,7 +123,7 @@ class PlayerObject: CharacterObject {
             armor = item
         }
         
-        if item.type == .Buff {
+        if item.type == .buff {
             if buff != nil {
                 removeItem(buff!)
             }
@@ -132,7 +132,7 @@ class PlayerObject: CharacterObject {
         }
     }
     
-    func equipItem(item: ItemObject) {
+    func equipItem(_ item: ItemObject) {
         self.checkEquipment(item)
         self.atk += item.atkBns
         self.def += item.defBns
@@ -146,7 +146,7 @@ class PlayerObject: CharacterObject {
     
     //MARK: - Healing Methods
     
-    func heal(amt: Double) {
+    func heal(_ amt: Double) {
         curHP += amt
         
         if curHP > maxHP { curHP = maxHP }
@@ -156,9 +156,9 @@ class PlayerObject: CharacterObject {
         heal(reg)
     }
     
-    func loseSanity(amt: Double) -> Bool {
+    func loseSanity(_ amt: Double) -> Bool {
         //The Madman does not lose sanity
-        if type == .Mad { return false }
+        if type == .mad { return false }
         
         sty -= amt
         
@@ -170,7 +170,7 @@ class PlayerObject: CharacterObject {
     
     //MARK: - Experience Methods
     
-    func gainExp(expGain: Double) -> Bool {
+    func gainExp(_ expGain: Double) -> Bool {
         let sanityBoost = expGain - (expGain * (sty/100.0))
         exp += expGain + sanityBoost
         
@@ -190,7 +190,7 @@ class PlayerObject: CharacterObject {
         lvl += 1
         expNeeded = pow(Double(lvl), 2) * 10
         
-        if type == .Resilient {
+        if type == .resilient {
             atk += 1.0
             def += 1.2
             maxHP += 7.0
@@ -198,7 +198,7 @@ class PlayerObject: CharacterObject {
             reg += 0.05
         }
             
-        else if type == .Deadly {
+        else if type == .deadly {
             atk += 1.2
             def += 1.0
             maxHP += 5.0
@@ -206,7 +206,7 @@ class PlayerObject: CharacterObject {
             reg += 0.05
         }
             
-        else if type == .Persistent {
+        else if type == .persistent {
             atk += 1.0
             def += 1.0
             maxHP += 6.0

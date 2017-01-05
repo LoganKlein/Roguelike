@@ -8,86 +8,60 @@
 
 /* Begin PBXBuildFile section */
 		0A8F6093E01F3E5FE2714D0E4E4D3929 /* Pods-RoguelikeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38844F97EA4CC9515A3C74AE9A6296A4 /* Pods-RoguelikeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10C86995D04A48756AE4797CFFEDD69A /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 297DF3C1D670575E4FC61D5D4E74EE3B /* iCarousel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3FC5DA791056A6E7063057BC3895623B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0B5C34B0704CE42DB8ACE437DB6B71 /* QuartzCore.framework */; };
-		511766314C3CEDD3DD57992399E1F871 /* Pods-Roguelike-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9148718D6170AC00FCC666A9E0D39 /* Pods-Roguelike-dummy.m */; };
-		623DD897858691368F5C1F27607E1977 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
-		6D93C54266D4C0007E0F023157AF1009 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
+		44828376D40F0B7BEC6397CCCD7FA735 /* Pods-Roguelike-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F826161C29B4978268DF5B120B37539 /* Pods-Roguelike-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D93C54266D4C0007E0F023157AF1009 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		7CFE63A9EF5CC1F74DC27BF59DE1F5E3 /* Pods-RoguelikeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2920B6713F14E762AD5A7938D4DAB415 /* Pods-RoguelikeTests-dummy.m */; };
-		88D2980E7DDCE7BECD28FF1E9074D2AE /* iCarousel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BCB2009ECECF2F86EED8722A85E1BB9 /* iCarousel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		887D689722FBA14D891E1456698A8AA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		8FAA919DAE6AE43041F36A064F382D40 /* Pods-RoguelikeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE66444310F50988F6B85E3BB92D49B2 /* Pods-RoguelikeUITests-dummy.m */; };
-		9E410092063ED650A83E9183AD682658 /* Pods-Roguelike-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F826161C29B4978268DF5B120B37539 /* Pods-Roguelike-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9C0CC132553846351F5A8FBFDF460D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
-		C28337DD2E94B98F7AEE739EF3674F02 /* iCarousel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C21597CA3CFCC94FF05645071FF642 /* iCarousel-dummy.m */; };
-		D5068AC17A2942CCF790C75B274835BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */; };
+		B9C0CC132553846351F5A8FBFDF460D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		E3B9780D7D64C748B7DB846CC307CDA8 /* Pods-Roguelike-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9148718D6170AC00FCC666A9E0D39 /* Pods-Roguelike-dummy.m */; };
 		ECFBE98724A6BFF47E8AF01E563234E8 /* Pods-RoguelikeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3895DFB0261F5BEF22208DFC72A8D823 /* Pods-RoguelikeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0A4075E8EC62F3C9C05E6CB951D5AF9 /* iCarousel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DC7DE4A0B6F162DE71CE235DF59D09F /* iCarousel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		79444DE2FD8BF2E503E57CAB5088E53C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3634ABA74A6F41DB3C7516A583373EE8;
-			remoteInfo = iCarousel;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00181874987DFAA5C70283F71D06A988 /* Pods-Roguelike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Roguelike.debug.xcconfig"; sourceTree = "<group>"; };
 		02FC49A27463365565B365407E410A7B /* Pods-RoguelikeTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RoguelikeTests-resources.sh"; sourceTree = "<group>"; };
+		03D37CFABD80C2FFB3AE181ED94A9B5D /* Pods_RoguelikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoguelikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CC77CF1EAEAF0598D87E32A91D70C8C /* Pods-RoguelikeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RoguelikeUITests.modulemap"; sourceTree = "<group>"; };
 		12B5C7BFC96DF77238D83A43C032C836 /* Pods-Roguelike-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Roguelike-acknowledgements.markdown"; sourceTree = "<group>"; };
-		13C21597CA3CFCC94FF05645071FF642 /* iCarousel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iCarousel-dummy.m"; sourceTree = "<group>"; };
-		14DED09F0002BB11D7DC529B8FAADFC6 /* Pods_RoguelikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoguelikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21ACB47E9F7A98C4271C972F327AA8E9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22EE90C44D389E7CED341EE22BB2D208 /* Pods_RoguelikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoguelikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2920B6713F14E762AD5A7938D4DAB415 /* Pods-RoguelikeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RoguelikeTests-dummy.m"; sourceTree = "<group>"; };
-		297DF3C1D670575E4FC61D5D4E74EE3B /* iCarousel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = iCarousel.m; path = iCarousel/iCarousel.m; sourceTree = "<group>"; };
 		2D94F3FBDECEFC90EA94A8E3E4655D75 /* Pods-RoguelikeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RoguelikeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2FC4A433272960EA1530DB6C0AABD97E /* Pods-Roguelike.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Roguelike.modulemap"; sourceTree = "<group>"; };
 		38844F97EA4CC9515A3C74AE9A6296A4 /* Pods-RoguelikeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RoguelikeUITests-umbrella.h"; sourceTree = "<group>"; };
 		3895DFB0261F5BEF22208DFC72A8D823 /* Pods-RoguelikeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RoguelikeTests-umbrella.h"; sourceTree = "<group>"; };
-		3E4160AB84FD38FD2AE9124ECC367572 /* Pods_RoguelikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoguelikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BD99007F8FA5F10AAF78962343A0B0 /* Pods-RoguelikeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RoguelikeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5306971D448E5FED68D2DB6211FCCC14 /* Pods-RoguelikeUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RoguelikeUITests-resources.sh"; sourceTree = "<group>"; };
 		678C409E49ECFEC93779C8F37141454F /* Pods-RoguelikeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RoguelikeTests-frameworks.sh"; sourceTree = "<group>"; };
 		6DCEF004B03153F1DAC1FE7548A07192 /* Pods-Roguelike-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Roguelike-acknowledgements.plist"; sourceTree = "<group>"; };
 		7553E975533D13FACBE43A700E809A02 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		77FBA5E0368FA173260243ED0A7E3AE1 /* iCarousel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iCarousel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BCB2009ECECF2F86EED8722A85E1BB9 /* iCarousel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = iCarousel.h; path = iCarousel/iCarousel.h; sourceTree = "<group>"; };
-		7DC7DE4A0B6F162DE71CE235DF59D09F /* iCarousel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iCarousel-umbrella.h"; sourceTree = "<group>"; };
-		8F701F4C36CFEA50076D72B6437CCDAF /* iCarousel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iCarousel.xcconfig; sourceTree = "<group>"; };
-		903CFA47DFD66D3777A79A69B3328159 /* iCarousel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = iCarousel.modulemap; sourceTree = "<group>"; };
-		90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9432CF30E0CB76AA53F401C52700B932 /* Pods-RoguelikeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RoguelikeTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		99BFD7745D511FF06A435F21B941B53D /* Pods_Roguelike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roguelike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF6E9AC931EC242DF2E0F81654CA92A /* Pods-Roguelike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Roguelike.release.xcconfig"; sourceTree = "<group>"; };
 		9F826161C29B4978268DF5B120B37539 /* Pods-Roguelike-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Roguelike-umbrella.h"; sourceTree = "<group>"; };
 		A6C4841276472A7BBAE5DAA6AFCFC9D0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A828254F8B66A4857D5A348B9448F89C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9D9148718D6170AC00FCC666A9E0D39 /* Pods-Roguelike-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Roguelike-dummy.m"; sourceTree = "<group>"; };
 		BE66444310F50988F6B85E3BB92D49B2 /* Pods-RoguelikeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RoguelikeUITests-dummy.m"; sourceTree = "<group>"; };
 		C2968C674558E888999BBE3770E0B177 /* Pods-RoguelikeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RoguelikeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C7EB4BC3BC41C58E78AAFA5A986014C3 /* Pods-RoguelikeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RoguelikeUITests-frameworks.sh"; sourceTree = "<group>"; };
 		CC2C4424DF600943906D1A18637F0EA5 /* Pods-RoguelikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RoguelikeTests.release.xcconfig"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D2A2D5B9CF7C939A6C34BD3F6B81DE30 /* Pods-RoguelikeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-RoguelikeTests.modulemap"; sourceTree = "<group>"; };
 		D558D2CD8C2ABE3A90066EBFC1E641DF /* Pods-Roguelike-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Roguelike-resources.sh"; sourceTree = "<group>"; };
 		D91EE3AC4B5F3D32D0589341E5158A5E /* Pods-Roguelike-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Roguelike-frameworks.sh"; sourceTree = "<group>"; };
 		DE480D58B6DF77062569DEB31CE20829 /* Pods-RoguelikeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RoguelikeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E806A185A6FC6D805560B1B4EE1ED30D /* iCarousel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iCarousel-prefix.pch"; sourceTree = "<group>"; };
 		E853072ABA4F03A1E46859EF3A9719C3 /* Pods-RoguelikeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RoguelikeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		EB0B5C34B0704CE42DB8ACE437DB6B71 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		F1D2B581964CC18EBEF98E8803B813DC /* Pods-RoguelikeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RoguelikeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FF8C4A0E51302AA70168C7C0707DFAFE /* Pods_Roguelike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roguelike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		331250AE8E2B04D0301CCDFDCA2157B0 /* Frameworks */ = {
+		4B4A0BDC36650160EC1039D2EEEED62E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				623DD897858691368F5C1F27607E1977 /* Foundation.framework in Frameworks */,
+				887D689722FBA14D891E1456698A8AA8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,15 +78,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C0CC132553846351F5A8FBFDF460D7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C2D32DD2168137C9C50ECCB9FE24BE94 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D5068AC17A2942CCF790C75B274835BF /* Foundation.framework in Frameworks */,
-				3FC5DA791056A6E7063057BC3895623B /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,26 +102,22 @@
 			path = "Target Support Files/Pods-RoguelikeTests";
 			sourceTree = "<group>";
 		};
-		33DC6B6548C9DA0D8D09CAAE4620B935 /* Support Files */ = {
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				903CFA47DFD66D3777A79A69B3328159 /* iCarousel.modulemap */,
-				8F701F4C36CFEA50076D72B6437CCDAF /* iCarousel.xcconfig */,
-				13C21597CA3CFCC94FF05645071FF642 /* iCarousel-dummy.m */,
-				E806A185A6FC6D805560B1B4EE1ED30D /* iCarousel-prefix.pch */,
-				7DC7DE4A0B6F162DE71CE235DF59D09F /* iCarousel-umbrella.h */,
-				A828254F8B66A4857D5A348B9448F89C /* Info.plist */,
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/iCarousel";
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		439F3651501C74BC683C3197792DE899 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				89F803C7E2D77E11F2120CB28FE0B795 /* iOS */,
+				FF8C4A0E51302AA70168C7C0707DFAFE /* Pods_Roguelike.framework */,
+				22EE90C44D389E7CED341EE22BB2D208 /* Pods_RoguelikeTests.framework */,
+				03D37CFABD80C2FFB3AE181ED94A9B5D /* Pods_RoguelikeUITests.framework */,
 			);
-			name = Frameworks;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6EA6D1727975B751E5331FD3A01807FC /* Pods-RoguelikeUITests */ = {
@@ -191,49 +152,18 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				AAA581DFCE6A6FF2B2DB97F757A79B01 /* Pods */,
-				80BD8C661E3EFE09B92FC32E952967CE /* Products */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				439F3651501C74BC683C3197792DE899 /* Products */,
 				7AFF72DC92223B1965FF2DEF9170C0CC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		80BD8C661E3EFE09B92FC32E952967CE /* Products */ = {
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				77FBA5E0368FA173260243ED0A7E3AE1 /* iCarousel.framework */,
-				99BFD7745D511FF06A435F21B941B53D /* Pods_Roguelike.framework */,
-				3E4160AB84FD38FD2AE9124ECC367572 /* Pods_RoguelikeTests.framework */,
-				14DED09F0002BB11D7DC529B8FAADFC6 /* Pods_RoguelikeUITests.framework */,
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		89F803C7E2D77E11F2120CB28FE0B795 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				90AAE8973B935FD4979EEDFB8B1E12AC /* Foundation.framework */,
-				EB0B5C34B0704CE42DB8ACE437DB6B71 /* QuartzCore.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		93E1F8386C1DCEE8733A525C2D240D3E /* iCarousel */ = {
-			isa = PBXGroup;
-			children = (
-				7BCB2009ECECF2F86EED8722A85E1BB9 /* iCarousel.h */,
-				297DF3C1D670575E4FC61D5D4E74EE3B /* iCarousel.m */,
-				33DC6B6548C9DA0D8D09CAAE4620B935 /* Support Files */,
-			);
-			path = iCarousel;
-			sourceTree = "<group>";
-		};
-		AAA581DFCE6A6FF2B2DB97F757A79B01 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				93E1F8386C1DCEE8733A525C2D240D3E /* iCarousel */,
-			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F0D7F3D6E6D4780C5C7015B8FDCA46CF /* Pods-Roguelike */ = {
@@ -257,12 +187,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		40EEEBC304853684165654A97A671DEC /* Headers */ = {
+		0A111E5D159256CBF5051A4A0B875E0E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0A4075E8EC62F3C9C05E6CB951D5AF9 /* iCarousel-umbrella.h in Headers */,
-				88D2980E7DDCE7BECD28FF1E9074D2AE /* iCarousel.h in Headers */,
+				44828376D40F0B7BEC6397CCCD7FA735 /* Pods-Roguelike-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,14 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A8F6093E01F3E5FE2714D0E4E4D3929 /* Pods-RoguelikeUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6B781320C2774A5310CE991B42DDD403 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9E410092063ED650A83E9183AD682658 /* Pods-Roguelike-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,24 +228,7 @@
 			);
 			name = "Pods-RoguelikeTests";
 			productName = "Pods-RoguelikeTests";
-			productReference = 3E4160AB84FD38FD2AE9124ECC367572 /* Pods_RoguelikeTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		3634ABA74A6F41DB3C7516A583373EE8 /* iCarousel */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5FD84838098E65920773FE786596F03E /* Build configuration list for PBXNativeTarget "iCarousel" */;
-			buildPhases = (
-				B5A1DBA438165C92401162C362D91E3E /* Sources */,
-				C2D32DD2168137C9C50ECCB9FE24BE94 /* Frameworks */,
-				40EEEBC304853684165654A97A671DEC /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = iCarousel;
-			productName = iCarousel;
-			productReference = 77FBA5E0368FA173260243ED0A7E3AE1 /* iCarousel.framework */;
+			productReference = 22EE90C44D389E7CED341EE22BB2D208 /* Pods_RoguelikeTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D41ABBCF2B6266B20A2C6AD40977B1FE /* Pods-RoguelikeUITests */ = {
@@ -341,25 +245,24 @@
 			);
 			name = "Pods-RoguelikeUITests";
 			productName = "Pods-RoguelikeUITests";
-			productReference = 14DED09F0002BB11D7DC529B8FAADFC6 /* Pods_RoguelikeUITests.framework */;
+			productReference = 03D37CFABD80C2FFB3AE181ED94A9B5D /* Pods_RoguelikeUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D53BF56159018E42BDAC4A2CB5C3F826 /* Pods-Roguelike */ = {
+		D98898FE757D0E164C02EE5403BC54B9 /* Pods-Roguelike */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC811CC3DF244BAE9D271345A7041FD8 /* Build configuration list for PBXNativeTarget "Pods-Roguelike" */;
+			buildConfigurationList = DA8145F4DD8AD4971EFBF5CB1AC4D619 /* Build configuration list for PBXNativeTarget "Pods-Roguelike" */;
 			buildPhases = (
-				7D6357524B578943DA8F8057BE1BB85E /* Sources */,
-				331250AE8E2B04D0301CCDFDCA2157B0 /* Frameworks */,
-				6B781320C2774A5310CE991B42DDD403 /* Headers */,
+				9789D7F36A794069758D9D609D56D304 /* Sources */,
+				4B4A0BDC36650160EC1039D2EEEED62E /* Frameworks */,
+				0A111E5D159256CBF5051A4A0B875E0E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C6400D0E0BF704AC44127B3B6F5EBB05 /* PBXTargetDependency */,
 			);
 			name = "Pods-Roguelike";
 			productName = "Pods-Roguelike";
-			productReference = 99BFD7745D511FF06A435F21B941B53D /* Pods_Roguelike.framework */;
+			productReference = FF8C4A0E51302AA70168C7C0707DFAFE /* Pods_Roguelike.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -379,12 +282,11 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 80BD8C661E3EFE09B92FC32E952967CE /* Products */;
+			productRefGroup = 439F3651501C74BC683C3197792DE899 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3634ABA74A6F41DB3C7516A583373EE8 /* iCarousel */,
-				D53BF56159018E42BDAC4A2CB5C3F826 /* Pods-Roguelike */,
+				D98898FE757D0E164C02EE5403BC54B9 /* Pods-Roguelike */,
 				1D5BEC43B8EAAA327B9D08D4129AFF1C /* Pods-RoguelikeTests */,
 				D41ABBCF2B6266B20A2C6AD40977B1FE /* Pods-RoguelikeUITests */,
 			);
@@ -400,20 +302,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D6357524B578943DA8F8057BE1BB85E /* Sources */ = {
+		9789D7F36A794069758D9D609D56D304 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				511766314C3CEDD3DD57992399E1F871 /* Pods-Roguelike-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5A1DBA438165C92401162C362D91E3E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C28337DD2E94B98F7AEE739EF3674F02 /* iCarousel-dummy.m in Sources */,
-				10C86995D04A48756AE4797CFFEDD69A /* iCarousel.m in Sources */,
+				E3B9780D7D64C748B7DB846CC307CDA8 /* Pods-Roguelike-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,15 +319,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C6400D0E0BF704AC44127B3B6F5EBB05 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = iCarousel;
-			target = 3634ABA74A6F41DB3C7516A583373EE8 /* iCarousel */;
-			targetProxy = 79444DE2FD8BF2E503E57CAB5088E53C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		034014829C1E4434983CF3A690C12017 /* Debug */ = {
@@ -479,6 +363,39 @@
 			};
 			name = Debug;
 		};
+		200CE777A14631E2A026F2A0ABBC1314 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF6E9AC931EC242DF2E0F81654CA92A /* Pods-Roguelike.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Roguelike/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Roguelike/Pods-Roguelike.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Roguelike;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		33EFA19D3501EC50362C6755525C8E10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D94F3FBDECEFC90EA94A8E3E4655D75 /* Pods-RoguelikeTests.debug.xcconfig */;
@@ -504,97 +421,6 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_RoguelikeTests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		35F53431360D1DDE44C71FD46A3AC827 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F701F4C36CFEA50076D72B6437CCDAF /* iCarousel.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/iCarousel/iCarousel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iCarousel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/iCarousel/iCarousel.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = iCarousel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4746A469E864EA7F185B485004962A85 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F701F4C36CFEA50076D72B6437CCDAF /* iCarousel.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/iCarousel/iCarousel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iCarousel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/iCarousel/iCarousel.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = iCarousel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9A20863DBAD8A93A916902ADECFD88F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00181874987DFAA5C70283F71D06A988 /* Pods-Roguelike.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Roguelike/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Roguelike/Pods-Roguelike.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Roguelike;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -636,13 +462,13 @@
 			};
 			name = Debug;
 		};
-		B39D058855668C1B2B7FC342A36FBFC9 /* Release */ = {
+		B701F5E65626CDA4EBA618E307A2625A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CF6E9AC931EC242DF2E0F81654CA92A /* Pods-Roguelike.release.xcconfig */;
+			baseConfigurationReference = 00181874987DFAA5C70283F71D06A988 /* Pods-Roguelike.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -655,7 +481,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Roguelike/Pods-Roguelike.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -667,7 +493,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -803,20 +629,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5FD84838098E65920773FE786596F03E /* Build configuration list for PBXNativeTarget "iCarousel" */ = {
+		DA8145F4DD8AD4971EFBF5CB1AC4D619 /* Build configuration list for PBXNativeTarget "Pods-Roguelike" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4746A469E864EA7F185B485004962A85 /* Debug */,
-				35F53431360D1DDE44C71FD46A3AC827 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EC811CC3DF244BAE9D271345A7041FD8 /* Build configuration list for PBXNativeTarget "Pods-Roguelike" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9A20863DBAD8A93A916902ADECFD88F1 /* Debug */,
-				B39D058855668C1B2B7FC342A36FBFC9 /* Release */,
+				B701F5E65626CDA4EBA618E307A2625A /* Debug */,
+				200CE777A14631E2A026F2A0ABBC1314 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

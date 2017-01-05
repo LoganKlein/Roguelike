@@ -24,8 +24,8 @@ extension Array {
 extension UIView {
     func rightSide() -> CGFloat {return frame.origin.x + frame.size.width;}
     func bottom() ->CGFloat {return frame.origin.y + frame.size.height;}
-    func setX(x: CGFloat){frame = CGRectMake(x, frame.origin.y, frame.size.width, frame.size.height);}
-    func setY(y: CGFloat){frame = CGRectMake(frame.origin.x, y, frame.size.width, frame.size.height);}
-    func setWidth(width: CGFloat){frame = CGRectMake(frame.origin.x, frame.origin.y, width, frame.size.height);}
-    func setHeight(height: CGFloat){frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, height);}
+    func setX(_ x: CGFloat){frame = CGRect(x: x, y: frame.origin.y, width: frame.size.width, height: frame.size.height);}
+    func setY(_ y: CGFloat){frame = CGRect(x: frame.origin.x, y: y, width: frame.size.width, height: frame.size.height);}
+    func setWidth(_ width: CGFloat){frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: width, height: frame.size.height);}
+    func setHeight(_ height: CGFloat){frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: height);}
 }

@@ -16,14 +16,14 @@ class EnemyObject: CharacterObject {
     
     //MARK: - Initialization Methods
     
-    class func getRandomEnemy(game: GameObject) -> EnemyObject {
+    class func getRandomEnemy(_ game: GameObject) -> EnemyObject {
         var enemies = EnemyObject.getEnemies("enemies", game: game)
         enemies.shuffle()
         let enemy = enemies.first
         return enemy!
     }
     
-    class func getEnemies(name: String, game: GameObject) -> [EnemyObject] {
+    class func getEnemies(_ name: String, game: GameObject) -> [EnemyObject] {
         let json: [NSDictionary] = JSONHelper.getArrayFromFile(name)
         var enemyArray: [EnemyObject] = []
         
@@ -35,7 +35,7 @@ class EnemyObject: CharacterObject {
         return enemyArray
     }
     
-    class func enemyFromInfo(dict: NSDictionary, game: GameObject) -> EnemyObject {
+    class func enemyFromInfo(_ dict: NSDictionary, game: GameObject) -> EnemyObject {
         let enemy = EnemyObject()
         enemy.name = dict["name"] as! String
         enemy.atk = dict["atk"] as! Double
@@ -49,7 +49,7 @@ class EnemyObject: CharacterObject {
         enemy.curHP = enemy.maxHP
         
         let imageName = dict["image"] as! String
-        enemy.displayView = UIView(frame: CGRectMake(0, 0, game.map.cellSize, game.map.cellSize))
+        enemy.displayView = UIView(frame: CGRect(x: 0, y: 0, width: game.map.cellSize, height: game.map.cellSize))
         enemy.characterIV = UIImageView(frame: enemy.displayView.frame)
         enemy.characterIV.image = UIImage(named: imageName)
         enemy.displayView.addSubview(enemy.characterIV)
@@ -58,7 +58,7 @@ class EnemyObject: CharacterObject {
     
     //MARK: - Location Methods
     
-    func determineDirection(game: GameObject) {
+    func determineDirection(_ game: GameObject) {
         var newLocation = coordinates
         
         //First, determine if the hero is in visible range
@@ -68,34 +68,34 @@ class EnemyObject: CharacterObject {
             var validity: Int = 0
             
             if tuple.yDif < 0 {
-                newLocation.y -= 1
+                newLocation?.y -= 1
             }
             
-            validity = CollisionHelper().spaceIsValid(game, location: newLocation)
+            validity = CollisionHelper().spaceIsValid(game, location: newLocation!)
             
             if ( tuple.yDif > 0 && validity != 0 && validity != 4 ) {
                 newLocation = coordinates
-                newLocation.y += 1
+                newLocation?.y += 1
             }
             
-            validity = CollisionHelper().spaceIsValid(game, location: newLocation)
+            validity = CollisionHelper().spaceIsValid(game, location: newLocation!)
             
             if (tuple.xDif < 0 && validity != 0 && validity != 4 ) {
                 newLocation = coordinates
-                newLocation.x -= 1
+                newLocation?.x -= 1
             }
             
-            validity = CollisionHelper().spaceIsValid(game, location: newLocation)
+            validity = CollisionHelper().spaceIsValid(game, location: newLocation!)
             
             if ( validity != 0 && validity != 4 ) {
                 newLocation = coordinates
-                newLocation.x += 1
+                newLocation?.x += 1
             }
             
-            validity = CollisionHelper().spaceIsValid(game, location: newLocation)
+            validity = CollisionHelper().spaceIsValid(game, location: newLocation!)
             
             if validity == 0 {
-                moveTo(newLocation, map: game.map)
+                moveTo(newLocation!, map: game.map)
             }
                 
             else if validity == 4 {
@@ -112,16 +112,16 @@ class EnemyObject: CharacterObject {
             while tries < 4 {
                 newLocation = coordinates
                 
-                if direction == 0 { newLocation.y -= 1 }        //Up
-                else if direction == 1 { newLocation.y += 1 }   //Down
-                else if direction == 2 { newLocation.x -= 1 }   //Left
-                else if direction == 3 { newLocation.x += 1 }   //Right
+                if direction == 0 { newLocation?.y -= 1 }        //Up
+                else if direction == 1 { newLocation?.y += 1 }   //Down
+                else if direction == 2 { newLocation?.x -= 1 }   //Left
+                else if direction == 3 { newLocation?.x += 1 }   //Right
                 
-                let validity = CollisionHelper().spaceIsValid(game, location: newLocation)
+                let validity = CollisionHelper().spaceIsValid(game, location: newLocation!)
                 
                 if validity == 0 {
                     tries = 5
-                    moveTo(newLocation, map: game.map)
+                    moveTo(newLocation!, map: game.map)
                 }
                     
                 else {
@@ -132,7 +132,7 @@ class EnemyObject: CharacterObject {
         }
     }
     
-    func nearHero(hero: CharacterObject) -> (near: Bool, xDif: Int, yDif: Int) {
+    func nearHero(_ hero: CharacterObject) -> (near: Bool, xDif: Int, yDif: Int) {
         let xDif = hero.coordinates.x - coordinates.x
         let yDif = hero.coordinates.y - coordinates.y
         let inXRange = (Int(xDif) >= visionRange * -1 && Int(xDif) <= visionRange)
@@ -142,7 +142,7 @@ class EnemyObject: CharacterObject {
     
     //MARK: - Animation Methods
     
-    func bumpHero(map: CAMap, hero: CharacterObject, xDif: Int, yDif: Int) {
+    func bumpHero(_ map: CAMap, hero: CharacterObject, xDif: Int, yDif: Int) {
         let oldCenter = self.displayView.center
         
         var newX = self.displayView.center.x
@@ -153,24 +153,26 @@ class EnemyObject: CharacterObject {
         if yDif > 0 {newY += map.cellSize/2}
         else if yDif < 0 {newY -= map.cellSize/2}
         
-        UIView.animateWithDuration(0.1, animations: {
-            self.displayView.center = CGPointMake(newX, newY)
+        UIView.animate(withDuration: 0.1, animations: {
+            self.displayView.center = CGPoint(x: newX, y: newY)
             }, completion: { (Bool) in
-                UIView.animateWithDuration(0.1, animations: {
+                UIView.animate(withDuration: 0.1, animations: {
                     self.displayView.center = oldCenter
                 })
         })
         
-        hero.takeDamage(self.atk)
+        if hero.takeDamage(self.atk) {
+            print("died")
+        }
     }
     
     //MARK: - Modification Methods
     
-    func killUnit(game: GameObject) {
-        let index = game.enemies.indexOf(self)
-        game.enemies.removeAtIndex(index!)
+    func killUnit(_ game: GameObject) {
+        let index = game.enemies.index(of: self)
+        game.enemies.remove(at: index!)
         
-        UIView.animateWithDuration(game.animSpeed, delay: game.animSpeed, options: .CurveEaseOut, animations: {
+        UIView.animate(withDuration: game.animSpeed, delay: game.animSpeed, options: .curveEaseOut, animations: {
             self.characterIV.alpha = 0
         }) { (Bool) in
             self.displayView.removeFromSuperview()

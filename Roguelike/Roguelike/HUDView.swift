@@ -28,16 +28,16 @@ class HUDView: UIView {
     @IBOutlet var levelLbl: UILabel!
     
     class func GenerateHUDView() -> HUDView {
-        let xib = NSBundle.mainBundle().loadNibNamed("HUDView", owner: self, options: nil)
-        let hud = xib[0] as! HUDView
+        let xib = Bundle.main.loadNibNamed("HUDView", owner: self, options: nil)
+        let hud = xib?[0] as! HUDView
         hud.healthView.layer.cornerRadius = hud.healthView.frame.size.height/2
         hud.sanityView.layer.cornerRadius = hud.sanityView.frame.size.height/2
         hud.expView.layer.cornerRadius = hud.expView.frame.size.height/2
         return hud
     }
     
-    func updateHUD(game: GameObject, speed: Double) {
-        UIView.animateWithDuration(speed) {
+    func updateHUD(_ game: GameObject, speed: Double) {
+        UIView.animate(withDuration: speed, animations: {
             self.levelLbl.text = "Level\n\(game.player.lvl)"
             self.floorLbl.text = "Floor\n\(game.floor)"
             self.healthLbl.text = "[\(Int(game.player.curHP))/\(Int(game.player.maxHP))]"
@@ -57,6 +57,6 @@ class HUDView: UIView {
             self.expWidthConstraint.constant = expWidth
             
             self.layoutIfNeeded()
-        }
+        }) 
     }
 }
