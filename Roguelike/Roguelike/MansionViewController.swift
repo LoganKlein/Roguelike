@@ -35,7 +35,7 @@ class MansionViewController: GameViewController {
     //MARK: - IBActions
     
     @IBAction func backPressed(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func rebuildPressed(_ sender: UIButton) {
